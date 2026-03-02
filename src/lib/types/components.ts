@@ -5,6 +5,7 @@ export type ComponentProps = {
 	node?: HTMLElement;
 	class?: string;
 	style?: string;
+	onclick?: () => void;
 };
 
 export type CtaComponentProps = ComponentProps & {
@@ -13,11 +14,17 @@ export type CtaComponentProps = ComponentProps & {
 
 export type TitleComponentProps = ComponentProps & {
 	headline: string;
-	text: string;
 	heading: 'h1' | 'h2' | 'h3';
+	text?: string;
 };
 
 export type SubtitleComponentProps = ComponentProps & {
 	headline: string;
-	text: string;
+	text?: string;
+};
+
+export type TabsComponentProps = ComponentProps & {
+	items: string[];
+	value: number;
+	onselect?: (index: number) => void;
 };

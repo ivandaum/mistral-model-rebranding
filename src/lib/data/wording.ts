@@ -86,6 +86,7 @@ export const FREE_MODELS = [
 		title: 'Devstral',
 		description: 'The best open-source model for coding agents.',
 		link: 'https://mistral.ai/news/devstral',
+		imageSize: 'size-8',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fab995cb2-f3b2-4bec-a9cb-5c09c60dad50&w=640&q=75'
 	},
@@ -109,5 +110,52 @@ export const FREE_MODELS = [
 		link: 'https://mistral.ai/news/voxtral',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc29ca011-87ff-45b0-8236-08d629812732&w=640&q=75'
+	}
+];
+
+export const CUSTOM_MODELS = [
+	{
+		title:
+			'Unique models tailored to your business, delivering very high accuracy at significantly lower cost.',
+		text: "Transform general-purpose LLMs into domain-specialized intelligence with Mistral AI's custom pre-training and model distillation services.",
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fe4661ac3-109d-4915-8b52-4fb654e17345&w=640&q=75',
+		cta: 'Try it in AI Studio',
+		ctaLink: 'https://console.mistral.ai/'
+	},
+	{
+		title: 'Fine-tune Mistral models using the API or in your own environment.',
+		text: 'Combine your data with Mistral’s efficient fine-tuning API or code to specialize Mistral models to your tasks.',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Ff071b533-6927-4bd6-ab15-f42ab60c79d8&w=640&q=75',
+		cta: 'Access open-source fine-tuning code',
+		ctaLink: 'https://console.mistral.ai/'
+	}
+];
+
+export const CUSTOM_MODEL_PERKS = [
+	{
+		title: 'Open',
+		text: 'Community hardened, open-weight models developed by the world’s best scientists.',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F41ccd33a-aa65-4a02-b14e-f9ffebb1f647&w=32&q=75'
+	},
+	{
+		title: 'Customizable',
+		text: 'Customize and control the full stack, from models to UX.',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Ff9ef87a3-3755-4ae2-8597-2c47a2c63211&w=32&q=75'
+	},
+	{
+		title: 'Private',
+		text: 'Deploy in your own environment so you own your data, models, and core competencies.',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Faf7d6358-33f6-4a45-8305-f172bb8cf71e&w=32&q=75'
+	},
+	{
+		title: 'Efficient',
+		text: 'Tap into small, super-efficient models tailored for productivity.',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F15e2cc51-e034-4e94-b964-3af9374fbe58&w=32&q=75'
 	}
 ];

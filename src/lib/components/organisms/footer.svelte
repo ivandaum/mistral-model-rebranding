@@ -1,3 +1,4 @@
+<!-- This is coming straight from Mistral website -->
 <footer id="footer" class="relative mt-5 bg-mistral-yellow-1 px-0 dark:bg-black dark:text-white">
 	<div class="absolute left-1/2 aspect-square size-[212px] -translate-x-1/2 translate-y-[-44%]">
 		<button
@@ -16,12 +17,12 @@
 			/></button
 		>
 	</div>
-	<div class="bg-mistral-footer-band-1 h-[50px]"></div>
-	<div class="bg-mistral-footer-band-2 h-[50px]"></div>
-	<div class="bg-mistral-footer-band-3 h-[50px]"></div>
-	<div class="bg-mistral-footer-band-4 h-[50px]"></div>
-	<div class="bg-mistral-footer-band-5 h-[50px]"></div>
-	<div class="bg-mistral-footer-band-6 h-[50px]"></div>
+	<div class="h-[50px] bg-mistral-footer-band-1"></div>
+	<div class="h-[50px] bg-mistral-footer-band-2"></div>
+	<div class="h-[50px] bg-mistral-footer-band-3"></div>
+	<div class="h-[50px] bg-mistral-footer-band-4"></div>
+	<div class="h-[50px] bg-mistral-footer-band-5"></div>
+	<div class="h-[50px] bg-mistral-footer-band-6"></div>
 	<div class="container mx-auto gap-4 p-5 py-16 md:flex xl:px-12">
 		<div class="flex w-full flex-col justify-between gap-8 md:w-2/5">
 			<div>
@@ -114,7 +115,7 @@
 		<div class="flex w-full flex-col gap-y-14 md:w-3/5">
 			<nav class="grid grid-cols-2 gap-4 md:grid-cols-4">
 				<div class="flex flex-col gap-y-1 text-[14px]/[24.5px] leading-normal">
-					<h3 class="first-of-type:text-mistral-orange pointer-events-none">Why Mistral</h3>
+					<h3 class="pointer-events-none first-of-type:text-mistral-orange">Why Mistral</h3>
 					<a target="_self" href="/about">About us</a><a target="_self" href="/customers"
 						>Our customers</a
 					><a target="_self" href="/careers">Careers</a><a target="_self" href="/contact"
@@ -122,7 +123,7 @@
 					>
 				</div>
 				<div class="flex flex-col gap-y-1 text-[14px]/[24.5px] leading-normal">
-					<h3 class="first-of-type:text-mistral-orange pointer-events-none">Explore</h3>
+					<h3 class="pointer-events-none first-of-type:text-mistral-orange">Explore</h3>
 					<a target="_self" href="/solutions">AI solutions</a><a target="_self" href="/partners"
 						>Partners</a
 					><a target="_self" href="/news?category=research">Research</a><a
@@ -132,7 +133,7 @@
 					>
 				</div>
 				<div class="flex flex-col gap-y-1 text-[14px]/[24.5px] leading-normal">
-					<h3 class="first-of-type:text-mistral-orange pointer-events-none">Build</h3>
+					<h3 class="pointer-events-none first-of-type:text-mistral-orange">Build</h3>
 					<a target="_self" href="/products/studio">Studio</a><a
 						target="_self"
 						href="/products/le-chat">Le Chat</a
@@ -142,7 +143,7 @@
 					>
 				</div>
 				<div class="flex flex-col gap-y-1 text-[14px]/[24.5px] leading-normal">
-					<h3 class="first-of-type:text-mistral-orange pointer-events-none">Legal</h3>
+					<h3 class="pointer-events-none first-of-type:text-mistral-orange">Legal</h3>
 					<a rel="noopener noreferrer" target="_blank" href="https://legal.mistral.ai/terms"
 						>Terms of service</a
 					><a target="_self" href="https://legal.mistral.ai/terms/privacy-policy?language=en-US"
@@ -164,7 +165,7 @@
 					data-state="closed"
 					class="group flex items-center gap-4 border-t border-black pt-2 uppercase dark:border-white"
 					>en<svg
-						class="text-mistral-orange size-4 origin-center rotate-90 transition-transform duration-200 group-data-[state=open]:-rotate-90"
+						class="size-4 origin-center rotate-90 text-mistral-orange transition-transform duration-200 group-data-[state=open]:-rotate-90"
 						width="24"
 						viewBox="0 0 9 13"
 						fill="none"

@@ -1,3 +1,5 @@
+<!-- This is coming straight from Mistral website -->
+
 <header class="absolute z-999 flex w-full items-center">
 	<div
 		class="bg-background pointer-events-none absolute top-0 left-0 z-0 w-full dark:text-white"
@@ -47,7 +49,7 @@
 					aria-haspopup="menu"
 					aria-expanded="false"
 					>Products
-					<div class="text-mistral-orange dark:text-mistral-orange relative h-3 overflow-hidden">
+					<div class="relative h-3 overflow-hidden text-mistral-orange dark:text-mistral-orange">
 						<div class="flex h-6 flex-col transition-transform duration-200">
 							<svg
 								class="size-3 shrink-0 rotate-90 transition-transform duration-300"
@@ -103,7 +105,7 @@
 					aria-expanded="false"
 					href="/solutions"
 					>Solutions
-					<div class="text-mistral-orange dark:text-mistral-orange relative h-3 overflow-hidden">
+					<div class="relative h-3 overflow-hidden text-mistral-orange dark:text-mistral-orange">
 						<div class="flex h-6 flex-col transition-transform duration-200">
 							<svg
 								class="size-3 shrink-0 rotate-90 transition-transform duration-300"
@@ -159,7 +161,7 @@
 					aria-expanded="false"
 					href="/models"
 					>Research
-					<div class="text-mistral-orange dark:text-mistral-orange relative h-3 overflow-hidden">
+					<div class="relative h-3 overflow-hidden text-mistral-orange dark:text-mistral-orange">
 						<div class="flex h-6 flex-col transition-transform duration-200">
 							<svg
 								class="size-3 shrink-0 rotate-90 transition-transform duration-300"
@@ -215,7 +217,7 @@
 					aria-expanded="false"
 					href="/news"
 					>Blog
-					<div class="text-mistral-orange dark:text-mistral-orange relative h-3 overflow-hidden">
+					<div class="relative h-3 overflow-hidden text-mistral-orange dark:text-mistral-orange">
 						<div class="flex h-6 flex-col transition-transform duration-200">
 							<svg
 								class="size-3 shrink-0 rotate-90 transition-transform duration-300"
@@ -271,7 +273,7 @@
 					aria-expanded="false"
 					href="/customers"
 					>Customers
-					<div class="text-mistral-orange dark:text-mistral-orange relative h-3 overflow-hidden">
+					<div class="relative h-3 overflow-hidden text-mistral-orange dark:text-mistral-orange">
 						<div class="flex h-6 flex-col transition-transform duration-200">
 							<svg
 								class="size-3 shrink-0 rotate-90 transition-transform duration-300"
@@ -326,7 +328,7 @@
 					aria-haspopup="menu"
 					aria-expanded="false"
 					>Company
-					<div class="text-mistral-orange dark:text-mistral-orange relative h-3 overflow-hidden">
+					<div class="relative h-3 overflow-hidden text-mistral-orange dark:text-mistral-orange">
 						<div class="flex h-6 flex-col transition-transform duration-200">
 							<svg
 								class="size-3 shrink-0 rotate-90 transition-transform duration-300"
@@ -384,7 +386,7 @@
 				class="group text-mistral-black bg-mistral-beige-deep/50 hover:bg-mistral-beige-deep hidden items-center gap-2 truncate px-4 py-2 text-sm md:flex dark:text-white"
 				href="/contact"
 				>Contact Sales<svg
-					class="text-mistral-orange ml-2 inline-block size-3 transition-transform group-hover:translate-x-0.5"
+					class="ml-2 inline-block size-3 text-mistral-orange transition-transform group-hover:translate-x-0.5"
 					width="24"
 					viewBox="0 0 9 13"
 					fill="none"
@@ -421,7 +423,7 @@
 						aria-haspopup="menu"
 						aria-expanded="false"
 						class="flex size-9 items-center justify-center border-l border-white/30 text-white hover:bg-white/10 dark:border-white/10"
-						><div class="text-mistral-orange relative h-3 overflow-hidden dark:text-white">
+						><div class="relative h-3 overflow-hidden text-mistral-orange dark:text-white">
 							<div class="flex h-6 flex-col transition-transform duration-200">
 								<svg
 									class="size-3 shrink-0 rotate-90 transition-transform duration-300"

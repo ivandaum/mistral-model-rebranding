@@ -2,6 +2,10 @@
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 
+## Live version
+
+The live version of this project is available at https://mistral-model-rebranding.netlify.app/
+
 ## Creating a project
 
 If you're seeing this, you've probably already done this step. Congrats!
