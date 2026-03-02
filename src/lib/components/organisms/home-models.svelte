@@ -8,7 +8,7 @@
 
 <section class="flex w-full max-w-7xl flex-col px-4">
 	<Subtitle
-		headline="Tailored for You. <br />Our premier models are designed to be yours to tune, customize, distill, and deploy. "
+		headline="Tailored <img class='inline-block size-8' src='https://cms.mistral.ai/assets/5708523c-f221-47bb-bb62-d052ee70bbc6.svg?width=32&height=22' /> for You. <br />Our premier models are designed to be yours to tune, customize, distill, and deploy. "
 		text="Available for commercial use."
 	/>
 

@@ -14,8 +14,8 @@
 
 <section class="flex w-full max-w-7xl flex-col items-center justify-center px-4">
 	<Title
-		headline="Custom models <br />for your own needs. <img class='w-14 shrink-0' src='https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fca2c4b33-d598-4898-bafc-991a0f4fa7d7.png%3Fwidth%3D88%26amp%3Bheight%3D115&w=128&q=75' />"
-		text="Make models your own through fine-tuning and customization. <br />Adapt our models to your specific use cases while maintaining core performance."
+		headline="Custom models <br>for your own needs. <img class='inline-block w-14 shrink-0' src='https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fca2c4b33-d598-4898-bafc-991a0f4fa7d7.png%3Fwidth%3D88%26amp%3Bheight%3D115&w=128&q=75' />"
+		text="Make models your own through fine-tuning and customization. <br> Adapt our models to your specific use cases while maintaining core performance."
 		heading="h2"
 	/>
 

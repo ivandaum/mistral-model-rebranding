@@ -32,4 +32,53 @@
 
 	/* text */
 	--color-mistral-text-1: rgb(31, 31, 31);
+
+	/* --animate-cta: cta-animation 1s ease-in-out;
+	--animate-pop-in: pop-in 1s ease-in-out;
+	--animate-bounce-in: bounce-in 1.25s ease-in-out; */
+	--animate-scale-in: animate-scale-in 300ms ease-in-out;
 }
+
+@keyframes animate-scale-in {
+	100%,
+	0% {
+		transform: scale3d(1, 1, 1);
+	}
+
+	50% {
+		transform: scale3d(1.1, 1.1, 1.1);
+	}
+}
+/* 
+@keyframes cta-animation {
+	0% {
+		transform: scale3d(1);
+	}
+	100% {
+		transform: scale3d(0);
+	}
+}
+
+@keyframes pop-in {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+
+@keyframes bounce-in {
+	0% {
+		clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0 100%);
+	}
+
+	20% {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+	40%,
+	100% {
+		clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+	}
+} 
+*/
