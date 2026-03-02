@@ -1,2 +1,13 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script>
+	import HomeIntro from '$lib/components/home-intro.svelte';
+</script>
+
+<!-- intro -->
+<HomeIntro />
+<!-- Tailored for you -->
+<!-- Free models for research -->
+<!-- Custom models for your own needs -->
+<!-- Ready to get start - optional ? -->
+<!-- Deploy our models anywhere -->
+<!-- Model licenses explained -->
+<!-- CTA get started -->
