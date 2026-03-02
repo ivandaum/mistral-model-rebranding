@@ -5,9 +5,7 @@
 	const { headline, text, heading, ...props }: TitleComponentProps = $props();
 </script>
 
-<div
-	class={cn('mb-10 flex flex-col items-center justify-center pt-50 pb-20 text-center', props.class)}
->
+<div class={cn('flex flex-col items-center justify-center pt-50 pb-10 text-center', props.class)}>
 	<svelte:element
 		this={heading}
 		class="text-foreground mb-8 flex items-center gap-2 text-[40px]/[42px] font-normal md:mb-5 md:text-7xl/[72px]"

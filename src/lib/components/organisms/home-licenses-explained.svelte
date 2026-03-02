@@ -5,7 +5,8 @@
 </script>
 
 <section class="flex w-full max-w-7xl flex-col justify-center px-4">
-	<Subtitle headline="Model licenses explained." />
+	<Subtitle headline="Model licenses explained." class="mb-22" />
+
 	<!-- this comes form Mistral page directly -->
 	<div class="overflow-x-auto">
 		<table class="w-full table-auto border-collapse text-left md:table-fixed">

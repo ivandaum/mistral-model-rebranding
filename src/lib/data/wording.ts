@@ -159,3 +159,30 @@ export const CUSTOM_MODEL_PERKS = [
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F15e2cc51-e034-4e94-b964-3af9374fbe58&w=32&q=75'
 	}
 ];
+
+export const DEPLOY_OUR_MODELS = [
+	{
+		title: 'Self-hosted',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F98875468-ed52-40e5-8007-124bd2782ac5&w=32&q=75',
+		text: 'Deploy Mistral models on virtual cloud, edge, or on-premises. Self-hosted deployments offer more advanced levels of customization and control. Your data stays within your walls.',
+		cta: 'Contact our team',
+		link: 'https://mistral.ai/contact'
+	},
+	{
+		title: 'Mistral Cloud',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fecdac1ed-522e-4a58-a3cc-23d03c40ba6e&w=32&q=75',
+		text: 'Get started with Mistral models in a few clicks via our developer platform hosted on Mistral’s infrastructure and build your own applications and services. Our servers are hosted in EU.',
+		cta: 'Access AI Studio',
+		link: 'https://console.mistral.ai/'
+	},
+	{
+		title: 'Cloud providers',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F43ac955d-8ce1-4003-b0e9-eddcfcdb9306&w=32&q=75',
+		text: 'Access our models via your preferred cloud provider (Google Cloud, AWS, Azure, IBM, Snowflake, NVIDIA, Outscale) and use your cloud credits. Mistral models are available on Azure AI Studio, AWS Bedrock, Google Cloud Model Garden, IBM Watsonx, and Snowflake.',
+		cta: 'Explore cloud deployments',
+		link: 'https://docs.mistral.ai/deployment/cloud'
+	}
+];

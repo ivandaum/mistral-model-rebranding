@@ -6,7 +6,7 @@
 </script>
 
 <div class={cn('flex w-full flex-col items-start justify-start', props.class)}>
-	<p class="mb-4 text-[30px]/[34.5px] md:text-5xl/[50px]">
+	<p class="mb-4 text-[30px]/[34.5px] md:max-w-[75%] md:text-5xl/[50px]">
 		{@html headline}
 	</p>
 	{#if text}

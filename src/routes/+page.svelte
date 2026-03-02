@@ -4,6 +4,8 @@
 	import HomeCustomModels from '$lib/components/organisms/home-custom-models.svelte';
 	import HomeGetStarted from '$lib/components/organisms/home-get-started.svelte';
 	import HomeLicensesExplained from '$lib/components/organisms/home-licenses-explained.svelte';
+	import HomeConclusion from '$lib/components/organisms/home-conclusion.svelte';
+	import HomeDeployOurModels from '$lib/components/organisms/home-deploy-our-models.svelte';
 </script>
 
 <!-- intro -->
@@ -14,8 +16,10 @@
 <!-- Custom models for your own needs -->
 <HomeCustomModels />
 <!-- Ready to get start - optional ? -->
-<!-- Deploy our models anywhere -->
 <HomeGetStarted />
+<!-- Deploy our models anywhere -->
+<HomeDeployOurModels />
 <!-- Model licenses explained -->
 <HomeLicensesExplained />
 <!-- CTA get started -->
+<HomeConclusion />

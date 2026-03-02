@@ -12,14 +12,21 @@
 		text="Available for commercial use."
 	/>
 
-	<div class="grid-wrap mb-8 grid w-full grid-cols-2 gap-2">
+	<div class="grid-wrap mb-8 grid w-full grid-cols-1 gap-2 md:grid-cols-2">
 		{#each COMMERCIAL_MODELS as model, i}
-			<div class={cn(['bg-mistral-yellow-' + (i + 1)], 'aspect-4/3 p-8')}>
-				<h3 class="text-foreground text-[46px] font-normal">{model.title}</h3>
-				<p class="mb-8">{model.intro}</p>
-				<p>{model.description}</p>
+			<div
+				class={cn(
+					['bg-mistral-yellow-' + (i + 1)],
+					'flex aspect-4/3 flex-col items-end justify-between p-8'
+				)}
+			>
+				<div>
+					<h3 class="text-foreground text-[46px] font-normal">{model.title}</h3>
+					<p class="mb-8">{model.intro}</p>
+					<p>{model.description}</p>
+				</div>
 
-				<Cta href={model.link}>Learn more</Cta>
+				<Cta class="mt-4" href={model.link}>Learn more</Cta>
 			</div>
 		{/each}
 	</div>
@@ -29,11 +36,11 @@
 			text="Free to use under the Apache 2.0 license."
 			class="w-full"
 		/>
-		<div class="grid-wrap mb-4 grid w-full grid-cols-4 gap-4">
+		<div class="grid-wrap mb-4 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
 			{#each FREE_MODELS as model}
 				<a
 					class={cn(
-						'flex aspect-4/3 flex-col justify-between border border-mistral-yellow-2 p-6 ',
+						'flex flex-col justify-between border border-mistral-yellow-2 p-6 md:aspect-4/3 ',
 						'hover:border-mistral-yellow-2 hover:bg-mistral-yellow-2'
 					)}
 					href={model.link}
@@ -44,7 +51,7 @@
 						</span>
 						<p>{model.title}</p>
 					</h3>
-					<p>{model.description}</p>
+					<p class="pt-4 md:pt-0">{model.description}</p>
 				</a>
 			{/each}
 		</div>

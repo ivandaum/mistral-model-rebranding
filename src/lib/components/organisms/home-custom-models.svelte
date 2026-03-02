@@ -45,9 +45,13 @@
 		{/each}
 	</div>
 
-	<div class="mt-[64px] mb-12 grid w-full grid-cols-4 border-r border-mistral-border-1">
+	<div
+		class="mt-[64px] mb-12 grid w-full grid-cols-1 border-r border-mistral-border-1 md:grid-cols-4"
+	>
 		{#each CUSTOM_MODEL_PERKS as perk}
-			<div class="flex flex-col gap-1 border-l border-mistral-border-1 px-6">
+			<div
+				class="flex flex-col gap-1 border-b border-l border-mistral-border-1 px-6 py-6 md:border-b-0 md:py-0"
+			>
 				<p class="text-foreground mb-6 w-fit text-[19px]/[26px] font-normal">{perk.title}</p>
 				<div class="mb-3 flex flex-1 items-start gap-6">
 					<img src={perk.image} alt="" />
