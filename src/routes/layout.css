@@ -14,6 +14,11 @@
 	--color-mistral-yellow-9: #f2920b;
 	--color-mistral-yellow-10: #ff9500;
 	--color-mistral-yellow-11: #ff8a00;
+
+	/** orange **/
+
+	--color-mistral-orange: #fa520f;
+
 	/** footer **/
 	--color-mistral-footer-band-1: #fff0c2;
 	--color-mistral-footer-band-2: #ffd900;
@@ -21,8 +26,6 @@
 	--color-mistral-footer-band-4: #ff8205;
 	--color-mistral-footer-band-5: #fa520f;
 	--color-mistral-footer-band-6: #e00400;
-
-	--color-mistral-orange: #fa520f;
 
 	/* text */
 	--color-mistral-text-1: rgb(31, 31, 31);

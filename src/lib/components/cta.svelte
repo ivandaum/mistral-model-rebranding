@@ -4,6 +4,6 @@
 	const { href, ...props }: CtaComponentProps = $props();
 </script>
 
-<a class="w-auto" {href}>
-	{@render props.children?.()}
+<a class="inline-block underline" {href}>
+	{@render props.children?.()} ->
 </a>

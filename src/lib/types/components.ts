@@ -10,3 +10,14 @@ export type ComponentProps = {
 export type CtaComponentProps = ComponentProps & {
 	href?: string;
 };
+
+export type TitleComponentProps = ComponentProps & {
+	headline: string;
+	text: string;
+	heading: 'h1' | 'h2' | 'h3';
+};
+
+export type SubtitleComponentProps = ComponentProps & {
+	headline: string;
+	text: string;
+};
