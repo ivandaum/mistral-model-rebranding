@@ -11,8 +11,8 @@
 
 <style lang="scss">
 	.bg-grid {
-		--grid-size-x: 49.8px;
-		--grid-size-y: 49.8px;
+		--grid-size-x: 50px;
+		--grid-size-y: 50px;
 		--grid-thickness: 1px;
 		--grid-color: var(--color-mistral-yellow-1);
 

@@ -10,6 +10,8 @@
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
 	import BackgroundGrid from '$lib/components/atoms/background-grid.svelte';
+	import { MODELS_EXAMPLES } from '$lib/data/wording';
+	import HomeXp from './home-xp.svelte';
 
 	const RAF_KEY = 'home_intro_parallax';
 
@@ -20,7 +22,7 @@
 	const animate = (t: number) => {
 		if (!containerEl) return;
 
-		y = lerp(0, 25, t);
+		y = lerp(0, 50, t);
 	};
 
 	const onShow = () => {
@@ -49,19 +51,21 @@
 	});
 </script>
 
-<section class="h-auto w-full" bind:this={containerEl} style={`--y:${y}%`}>
-	<BackgroundGrid class="flex min-h-dvh w-full items-center justify-center">
+<section class="relative h-auto w-full" bind:this={containerEl} style={`--y:${y}%`}>
+	<BackgroundGrid class="pointer-none flex min-h-dvh w-full items-center justify-center">
 		<Title
 			headline="It starts with frontier science."
 			text="State of the art models with cutting edge capabilities, from cloud to edge."
 			heading="h1"
-			class="max-w-7xl translate-y-(--y)"
+			class="z-10 max-w-7xl translate-y-(--y) bg-radial from-mistral-bg-yellow from-60% to-transparent p-10"
 		>
-			<Cta href="https://mistral.ai/contact" class="bg-mistral-bg-yellow" text="Contact sales" />
+			<Cta
+				href="https://mistral.ai/contact"
+				class="bg-mistral-bg-yellow delay-1000"
+				text="Contact sales"
+			/>
 		</Title>
 	</BackgroundGrid>
 
-	<!-- {#each MODELS_EXAMPLES as model}
-		<div></div>
-	{/each} -->
+	<HomeXp />
 </section>

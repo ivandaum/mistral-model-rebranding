@@ -25,6 +25,8 @@
 				'opacity-0': !show
 			},
 			props.class,
+
+			// if we have to make a line break
 			{
 				'block h-0': ['<br>', '<br />'].includes(letter)
 			}

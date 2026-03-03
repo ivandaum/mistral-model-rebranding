@@ -21,7 +21,7 @@
 
 		const domObserver = observer({
 			element: elementRef,
-			rootMargin: '0px 0px -250px 0px',
+			rootMargin: '0px 0px -150px 0px',
 			onShow: () => {
 				show = true;
 			}
@@ -45,7 +45,7 @@
 			rand={1}
 			{show}
 			class={cn('mr-2 inline-block duration-300', {
-				'translate-x-2': !show
+				'translate-x-4': !show
 			})}
 		/>
 	</p>

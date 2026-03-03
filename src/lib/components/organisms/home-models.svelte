@@ -52,7 +52,12 @@
 	onMount(() => {
 		if (!stickyContainerEl || !stickyEl) return;
 
-		const domObserver = observer({ element: stickyContainerEl, onShow, onHide });
+		const domObserver = observer({
+			element: stickyContainerEl,
+			onShow,
+			onHide,
+			rootMargin: '0px 0px 0px 0px'
+		});
 
 		return () => {
 			domObserver.destroy();
@@ -76,7 +81,7 @@
 					bind:this={stickyEl}
 				>
 					{#each COMMERCIAL_MODELS as model, i}
-						<CardModel {model} class={'bg-mistral-yellow-' + (i + 1)} />
+						<CardModel {model} class={['bg-mistral-yellow-' + (i + 1)]} />
 					{/each}
 				</div>
 			</div>

@@ -3,7 +3,7 @@ import type { Snippet } from 'svelte';
 export type ComponentProps = {
 	children?: Snippet;
 	node?: HTMLElement;
-	class?: string;
+	class?: string | string[];
 	style?: string;
 	onclick?: () => void;
 };
