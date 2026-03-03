@@ -37,6 +37,8 @@
 	/* heights */
 	--model-card-max-height: calc(90dvh - 230px);
 
+	--delay: 0ms;
+
 	/* keyframes */
 	--animate-blink-twice: animate-blink-twice 350ms linear;
 	--animate-cta-letter: animate-cta-letter 350ms linear;
@@ -44,9 +46,11 @@
 
 @keyframes animate-cta-letter {
 	0%,
-	90% {
+	50% {
 		opacity: 0;
 	}
+
+	51%,
 	100% {
 		opacity: 1;
 	}

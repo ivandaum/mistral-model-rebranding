@@ -16,17 +16,8 @@
 	let elementRef: HTMLAnchorElement | undefined = $state();
 
 	let showElement = $state(false);
-	let hasFadeIn = $state(true);
 
-	let timeout: NodeJS.Timeout | undefined;
-
-	const STEP = 20;
-
-	const onMouseEnter = () => {
-		hasFadeIn = false;
-		clearTimeout(timeout);
-		timeout = setTimeout(() => (hasFadeIn = true), STEP * text.split('').length);
-	};
+	const STEP = 15;
 
 	onMount(() => {
 		if (!elementRef) {
@@ -50,19 +41,26 @@
 	class={cn(
 		'relative inline-flex border border-mistral-text-1 font-normal',
 		// transitions
-		'transition-all duration-400 ease-in-out hover:text-mistral-orange hover:[&_img]:animate-blink-twice',
+		'transition-all duration-400 ease-in-out',
+		'hover:text-mistral-orange hover:[&_img]:animate-blink-twice hover:[&_span]:animate-cta-letter',
 		{
 			'translate-y-2 opacity-0': !showElement
 		},
 		props.class
 	)}
 	{href}
-	onmouseenter={onMouseEnter}
 	bind:this={elementRef}
 >
 	{#if text}
 		<p class="relative z-10 py-2 pl-4 text-nowrap">
-			<LetterAnimated {text} class="duration-50" step={STEP} rand={1} show={hasFadeIn} />
+			<LetterAnimated
+				{text}
+				class="duration-150"
+				style="animation-delay: var(--delay);"
+				step={STEP}
+				rand={1}
+				show={true}
+			/>
 		</p>
 	{/if}
 	<p class="relative z-10 flex size-10 shrink-0 items-center justify-center gap-1 overflow-hidden">
