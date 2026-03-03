@@ -5,9 +5,8 @@
 
 	import { cn } from '$lib/utils/cn';
 	import { observer } from '$lib/utils/observer';
-	import { explodeHtmlString } from '$lib/utils/explode-html-string';
-	import { randomDelay } from '$lib/utils/random-delay';
-	import LetterAnimated from '../atoms/letter-animated.svelte';
+
+	import LetterAnimated from '$lib/components/atoms/letter-animated.svelte';
 
 	const { headline, text, heading, ...props }: TitleComponentProps = $props();
 

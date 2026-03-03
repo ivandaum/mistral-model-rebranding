@@ -12,11 +12,16 @@
 	let { href, text, ...props }: CtaComponentProps = $props();
 
 	let elementRef: HTMLAnchorElement | undefined = $state();
-	let show = $state(false);
+
+	let showElement = $state(false);
+	let hasFadeIn = $state(true);
+
+	let timeout: NodeJS.Timeout | undefined;
 
 	const onMouseEnter = () => {
-		show = false;
-		setTimeout(() => (show = true), 350);
+		hasFadeIn = false;
+		clearTimeout(timeout);
+		timeout = setTimeout(() => (hasFadeIn = true), 20 * text.split('').length);
 	};
 
 	onMount(() => {
@@ -27,8 +32,7 @@
 		const domObserver = observer({
 			element: elementRef,
 			onShow: () => {
-				show = true;
-				console.log('show cta');
+				showElement = true;
 			}
 		});
 
@@ -39,24 +43,37 @@
 </script>
 
 <a
-	class={cn('inline-flex border border-mistral-text-1 font-normal transition-all', props.class)}
+	class={cn(
+		'relative inline-flex border border-mistral-text-1 font-normal',
+		// transitions
+		'transition-all duration-400 ease-in-out hover:text-mistral-orange',
+		{
+			'opacity-0': !showElement
+		},
+		props.class
+	)}
 	{href}
 	onmouseenter={onMouseEnter}
 	bind:this={elementRef}
 >
 	{#if text}
-		<p class="py-2 pl-4 text-nowrap">
-			<LetterAnimated
-				{text}
-				step={25}
-				{show}
-				class={cn({
-					'': show
-				})}
-			/>
+		<p class="relative z-10 py-2 pl-4 text-nowrap">
+			<LetterAnimated {text} regex="" class="duration-50" step={20} rand={1} show={hasFadeIn} />
 		</p>
 	{/if}
-	<span class="flex size-10 shrink-0 items-center justify-center">
-		<img class="size-3 translate-y-[1px]" src={arrow} alt="arrow" />
+	<span class="relative z-10 flex size-10 shrink-0 items-center justify-end gap-1 overflow-hidden">
+		{#each Array.from(Array(2)) as a}
+			<span
+				class={cn(
+					'flex size-10 shrink-0 items-center justify-center',
+					// transitions
+					{
+						'animate-translate-cta-arrow': hasFadeIn
+					}
+				)}
+			>
+				<img class="size-3 translate-y-[1px]" src={arrow} alt={arrow + a} />
+			</span>
+		{/each}
 	</span>
 </a>

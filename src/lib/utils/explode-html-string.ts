@@ -26,7 +26,5 @@ export const explodeHtmlString = (text: string, regex: string = ''): string[] =>
 		}
 	});
 
-	console.log('str', str);
-
 	return str;
 };
