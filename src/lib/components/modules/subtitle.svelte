@@ -45,7 +45,7 @@
 			rand={1}
 			{show}
 			class={cn('mr-2 inline-block duration-300', {
-				'translate-y-4': !show
+				'translate-x-2': !show
 			})}
 		/>
 	</p>

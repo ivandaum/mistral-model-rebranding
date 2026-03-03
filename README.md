@@ -5,8 +5,13 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 ## Inspiration
 
 - Chatbot animation (text abruptly appearing and disappearing)
-- 8 bit & Robot references (motion with low FPS, pixelated animation, blinking cursor)
+- 8 bit & Robot references (motion with low FPS, pixelated animation, blinking cursor, scrolling information)
 - Mistral branding (color scheme, playing on shapes of yellow -> orange)
+
+Motion references :
+
+- (futuristic city 1)[https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2989da120242593.60adeb7e781fc.gif]
+- (Cyberpunk city 2)[https://id.pinterest.com/pin/35747390786995745/]
 
 ## Goal
 
