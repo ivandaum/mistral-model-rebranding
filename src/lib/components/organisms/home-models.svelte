@@ -1,13 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-	import { COMMERCIAL_MODELS, FREE_MODELS } from '$lib/data/wording';
+	import { COMMERCIAL_MODELS } from '$lib/data/wording';
 
 	import Raf from '$lib/utils/raf';
 	import { cn } from '$lib/utils/cn';
 	import { observer } from '$lib/utils/observer';
-	import { currentScroll } from '$lib/utils/current-scroll';
-	import { normalize, round } from '$lib/utils/math';
 
 	import arrowRight from '$lib/assets/arrow-right.svg';
 
@@ -15,8 +13,6 @@
 	import Subtitle from '$lib/components/modules/subtitle.svelte';
 	import { sectionScrollProgress } from '$lib/utils/section-scroll-progress';
 
-	// let top = 0;
-	// let height = 0;
 	let contentWidth = 0;
 
 	let stickyContainerEl: HTMLDivElement | undefined = $state();
@@ -29,21 +25,10 @@
 	let x: number = $state(0);
 	let easedX = 0;
 
-	// const animate = () => {
-	// 	if (!stickyContainerEl) return;
-
-	// 	// check where the current scroll is in the section
-	// 	let tmpX = normalize(currentScroll(), top, top + height);
-	// 	tmpX = Math.min(1, Math.max(0, tmpX));
-	// 	tmpX = round(tmpX);
-
-	// 	easedX = tmpX * contentWidth;
-	// 	x += Math.floor((easedX - x) * 0.1);
-	// };
-
 	const animate = (t: number) => {
 		if (!stickyContainerEl) return;
 
+		// eased X for smooth translate
 		easedX = Math.min(1, Math.max(0, t));
 		easedX = easedX * contentWidth;
 		x += Math.floor((easedX - x) * 0.1);
@@ -52,13 +37,6 @@
 	const onShow = () => {
 		if (!stickyContainerEl || !stickyEl) return;
 
-		// const rect = stickyContainerEl?.getBoundingClientRect();
-
-		// // save location to be sure to scroll at the right path
-		// top = rect.top + currentScroll();
-		// // TODO : deal with windowHeight < rect height
-		// // may break the scroll
-		// height = rect?.height - window.innerHeight;
 		const { init, getScroll } = sectionScrollProgress(stickyContainerEl, 0, window.innerHeight);
 
 		contentWidth = stickyEl.getBoundingClientRect().width - MAX_WIDTH;
@@ -126,34 +104,5 @@
 				</div>
 			</div>
 		</div>
-	</div>
-
-	<div class="m-auto flex max-w-7xl flex-col items-center px-4">
-		<Subtitle
-			headline="Free open-weight models for research."
-			text="Free to use under the Apache 2.0 license."
-			class="w-full"
-		/>
-		<div class="grid-wrap mb-4 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
-			{#each FREE_MODELS as model}
-				<a
-					class={cn(
-						'flex flex-col justify-between border border-mistral-yellow-2 p-6 md:aspect-4/3 ',
-						'hover:border-mistral-yellow-2 hover:bg-mistral-yellow-2'
-					)}
-					href={model.link}
-				>
-					<h3 class="flex gap-2 text-[24px]">
-						<span class={cn('flex size-10 items-center justify-center')}>
-							<img src={model.image} alt="" class={cn(model.imageSize)} />
-						</span>
-						<p>{model.title}</p>
-					</h3>
-					<p class="pt-4 md:pt-0">{model.description}</p>
-				</a>
-			{/each}
-		</div>
-
-		<Cta href="https://docs.mistral.ai/getting-started/models" text="Download weights" />
 	</div>
 </section>

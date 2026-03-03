@@ -6,13 +6,15 @@
 	import HomeLicensesExplained from '$lib/components/organisms/home-licenses-explained.svelte';
 	import HomeConclusion from '$lib/components/organisms/home-conclusion.svelte';
 	import HomeDeployOurModels from '$lib/components/organisms/home-deploy-our-models.svelte';
+	import HomeFreeModels from '$lib/components/organisms/home-free-models.svelte';
 </script>
 
 <!-- intro -->
 <HomeIntro />
 <!-- Tailored for you -->
-<!-- Free models for research -->
 <HomeModels />
+<!-- Free models for research -->
+<HomeFreeModels />
 <!-- Custom models for your own needs -->
 <HomeCustomModels />
 <!-- Ready to get start - optional ? -->
