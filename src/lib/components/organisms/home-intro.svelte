@@ -8,6 +8,7 @@
 		headline="It starts with frontier science."
 		text="State of the art models with cutting edge capabilities, from cloud to edge."
 		heading="h1"
+		class="max-w-[75%]"
 	>
 		<Cta href="https://mistral.ai/contact" class="bg-mistral-bg-yellow" text="Contact sales" />
 	</Title>

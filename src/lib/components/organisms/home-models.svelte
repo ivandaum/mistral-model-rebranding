@@ -2,14 +2,17 @@
 	import { onMount } from 'svelte';
 
 	import { COMMERCIAL_MODELS, FREE_MODELS } from '$lib/data/wording';
-	import { cn } from '$lib/utils/cn';
-	import Cta from '$lib/components/atoms/cta.svelte';
 
-	import Subtitle from '$lib/components/modules/subtitle.svelte';
+	import Raf from '$lib/utils/raf';
+	import { cn } from '$lib/utils/cn';
 	import { observer } from '$lib/utils/observer';
 	import { currentScroll } from '$lib/utils/current-scroll';
-	import Raf from '$lib/utils/raf';
 	import { normalize, round } from '$lib/utils/math';
+
+	import arrowRight from '$lib/assets/arrow-right.svg';
+
+	import Cta from '$lib/components/atoms/cta.svelte';
+	import Subtitle from '$lib/components/modules/subtitle.svelte';
 
 	let top = 0;
 	let height = 0;
@@ -35,7 +38,7 @@
 
 		easedX = tmpX * contentWidth;
 
-		x += (easedX - x) * 0.1;
+		x += Math.floor((easedX - x) * 0.1);
 	};
 
 	const onShow = () => {
@@ -45,7 +48,9 @@
 
 		// save location to be sure to scroll at the right path
 		top = rect.top + currentScroll();
-		height = rect?.height - window.innerHeight * 0.75;
+		// TODO : deal with windowHeight < rect height
+		// may break the scroll
+		height = rect?.height - window.innerHeight;
 
 		contentWidth = stickyEl.getBoundingClientRect().width - MAX_WIDTH;
 
@@ -70,42 +75,41 @@
 </script>
 
 <section class="flex w-full flex-col">
-	<div class="h-[200dvh]" bind:this={stickyContainerEl} style={`--x:-${x}px`}>
-		<div class="sticky top-0 left-0 flex flex-col justify-start overflow-x-hidden py-4">
+	<div class="md:h-[200dvh]" bind:this={stickyContainerEl} style={`--x:-${x}px`}>
+		<div class="sticky top-8 left-0 flex flex-col justify-start overflow-x-hidden py-4">
 			<Subtitle
 				headline="Tailored <img class='inline-block size-8' src='https://cms.mistral.ai/assets/5708523c-f221-47bb-bb62-d052ee70bbc6.svg?width=32&height=22' /> for You. <br />Our premier models are designed to be yours to tune, customize, distill, and deploy. "
 				text="Available for commercial use."
 				class="m-auto max-w-7xl px-4"
 			/>
-			<div
-				class={cn(
-					'm-auto mb-8 w-full max-w-7xl'
-					// snap-x snap-mandatory overflow-x-scroll
-				)}
-			>
+			<div class={cn('m-auto mb-8 w-full max-w-7xl')}>
 				<div
 					style="transform: translate3d(calc(var(--x)), 0px, 0px)"
-					class="flex w-max gap-2 px-4"
+					class="flex w-full snap-x snap-mandatory gap-2 overflow-x-scroll px-4 md:w-max md:snap-none md:overflow-visible"
 					bind:this={stickyEl}
 				>
 					{#each COMMERCIAL_MODELS as model, i}
 						<div
 							class={cn(
 								'bg-mistral-yellow-' + (i + 1),
-								'flex aspect-12/16 w-[90%] shrink-0 flex-col items-end justify-between p-8 md:w-[40%] md:max-w-[500px]'
+								'flex w-[75vw] shrink-0 snap-center flex-col items-start justify-between gap-8 p-8 md:snap-none',
+								'md:aspect-12/16 md:max-h-(--model-card-max-height) md:w-[40%] md:max-w-[500px]'
 							)}
 						>
-							<div class="w-full">
+							<div class="w-full md:max-w-[90%]">
 								<h3 class="text-foreground text-[46px] font-normal">{model.title}</h3>
 								<p
 									class="text-foreground mb-8 text-xl/[21.6px] leading-6 font-normal md:text-[20px]/[24px]"
 								>
 									{model.intro}
 								</p>
-								<Cta class="mt-4" href={model.link} text="Learn more" />
 							</div>
-							<div class="flex flex-col items-end justify-start">
-								<p class="font-normal">{model.description}</p>
+							<div class="flex items-start justify-start gap-4 md:max-w-[90%]">
+								<img src={arrowRight} class="mt-1 size-4 md:mt-0 md:size-6" alt="arrow right" />
+								<span>
+									<p class="font-normal">{model.description}</p>
+									<Cta class="mt-4" href={model.link} text="Learn more" />
+								</span>
 							</div>
 						</div>
 					{/each}
