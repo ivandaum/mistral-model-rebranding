@@ -60,4 +60,8 @@
 			<Cta href="https://mistral.ai/contact" class="bg-mistral-bg-yellow" text="Contact sales" />
 		</Title>
 	</BackgroundGrid>
+
+	<!-- {#each MODELS_EXAMPLES as model}
+		<div></div>
+	{/each} -->
 </section>

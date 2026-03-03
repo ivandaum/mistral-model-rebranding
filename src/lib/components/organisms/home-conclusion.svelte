@@ -8,6 +8,7 @@
 		headline="Get started with Mistral models."
 		text="It's time to get to the frontier."
 		heading="h2"
+		class="pt-25"
 	>
 		<div class="flex flex-wrap justify-center gap-4">
 			<Cta
