@@ -30,6 +30,15 @@ export type TabsComponentProps = ComponentProps & {
 	onselect?: (index: number) => void;
 };
 
+export type CardModelComponentProps = ComponentProps & {
+	model: {
+		title: string;
+		description: string;
+		intro: string;
+		link: string;
+	};
+};
+
 export type LetterAnimatedComponentProps = ComponentProps & {
 	text: string;
 	show: boolean;
