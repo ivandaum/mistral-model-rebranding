@@ -8,6 +8,15 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - 8 bit & Robotreferences (pixel motion with less FPS)
 - Mistral branding (color scheme, playing on shapes of yellow -> orange)
 
+## Improvements
+
+- Normalize h1 & h2 to make a better visual hierarchy
+- h1 level paragraph have a "robotic/8bit" fade-in
+- h1 have a parallax effect on scroll
+- h2-h3 level paragraph have a smooth "futuristic" fade-in
+- Model cards has been added side-to-side to be able to read more than one at once, and have a parallax effect on scroll as well
+- Cta have a "chat is answering" / "chat is thinking" effect on hover, while the arrow icon is blinking like a cursor
+
 ## Live version
 
 The live version of this project is available at https://mistral-model-rebranding.netlify.app/
