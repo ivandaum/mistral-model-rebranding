@@ -56,7 +56,7 @@
 				maxDelay={1500}
 				rand={1}
 				{show}
-				class={cn('animate-letter mr-1 inline-block duration-350', {
+				class={cn('animate-letter mr-1.5 inline-block duration-350', {
 					'translate-y-2 opacity-0': !show
 				})}
 			/>

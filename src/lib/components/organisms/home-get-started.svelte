@@ -6,10 +6,12 @@
 
 <section class="w-full">
 	<BackgroundGrid class="flex w-full flex-col justify-center px-4">
-		<div class="w-full max-w-7xl">
-			<Title headline="Ready to get started?" heading="h2" class="pt-50 pb-50">
-				<Cta href="https://mistral.ai/contact" text="Get your commercial license" />
-			</Title>
-		</div>
+		<Title
+			headline="Ready to get started?"
+			heading="h2"
+			class="m-auto w-full max-w-7xl pt-50 pb-50"
+		>
+			<Cta href="https://mistral.ai/contact" text="Get your commercial license" />
+		</Title>
 	</BackgroundGrid>
 </section>

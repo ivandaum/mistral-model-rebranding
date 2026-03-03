@@ -13,9 +13,10 @@
 
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Subtitle from '$lib/components/modules/subtitle.svelte';
+	import { sectionScrollProgress } from '$lib/utils/section-scroll-progress';
 
-	let top = 0;
-	let height = 0;
+	// let top = 0;
+	// let height = 0;
 	let contentWidth = 0;
 
 	let stickyContainerEl: HTMLDivElement | undefined = $state();
@@ -28,33 +29,42 @@
 	let x: number = $state(0);
 	let easedX = 0;
 
-	const animate = () => {
+	// const animate = () => {
+	// 	if (!stickyContainerEl) return;
+
+	// 	// check where the current scroll is in the section
+	// 	let tmpX = normalize(currentScroll(), top, top + height);
+	// 	tmpX = Math.min(1, Math.max(0, tmpX));
+	// 	tmpX = round(tmpX);
+
+	// 	easedX = tmpX * contentWidth;
+	// 	x += Math.floor((easedX - x) * 0.1);
+	// };
+
+	const animate = (t: number) => {
 		if (!stickyContainerEl) return;
 
-		// check where the current scroll is in the section
-		let tmpX = normalize(currentScroll(), top, top + height);
-		tmpX = Math.min(1, Math.max(0, tmpX));
-		tmpX = round(tmpX);
-
-		easedX = tmpX * contentWidth;
+		easedX = t * contentWidth;
 		x += Math.floor((easedX - x) * 0.1);
 	};
 
 	const onShow = () => {
 		if (!stickyContainerEl || !stickyEl) return;
 
-		const rect = stickyContainerEl?.getBoundingClientRect();
+		// const rect = stickyContainerEl?.getBoundingClientRect();
 
-		// save location to be sure to scroll at the right path
-		top = rect.top + currentScroll();
-		// TODO : deal with windowHeight < rect height
-		// may break the scroll
-		height = rect?.height - window.innerHeight;
+		// // save location to be sure to scroll at the right path
+		// top = rect.top + currentScroll();
+		// // TODO : deal with windowHeight < rect height
+		// // may break the scroll
+		// height = rect?.height - window.innerHeight;
+		const { init, getScroll } = sectionScrollProgress(stickyContainerEl, window.innerHeight);
 
 		contentWidth = stickyEl.getBoundingClientRect().width - MAX_WIDTH;
 
+		init();
 		const raf = Raf.getInstance();
-		raf.add(RAF_KEY, animate);
+		raf.add(RAF_KEY, () => getScroll?.((t) => animate(t)));
 	};
 
 	const onHide = () => {
