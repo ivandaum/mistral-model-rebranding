@@ -8,6 +8,12 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - 8 bit & Robotreferences (pixel motion with less FPS)
 - Mistral branding (color scheme, playing on shapes of yellow -> orange)
 
+## Goal
+
+The goal is to challenge the current design. While using the same codes (color, content), I try to make the page
+more "alive" and dynamic, with the feeling the content is more reactive to the user. Each animation should
+be playfull and fun, while still leaving the content readable and accessible right away. The experience should also be consistent on mobile
+
 ## Improvements
 
 - Normalize h1 & h2 to make a better visual hierarchy
@@ -16,6 +22,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - h2-h3 level paragraph have a smooth "futuristic" fade-in
 - Model cards has been added side-to-side to be able to read more than one at once, and have a parallax effect on scroll as well
 - Cta have a "chat is answering" / "chat is thinking" effect on hover, while the arrow icon is blinking like a cursor
+- All animations are active in the mobile version
 
 ## Live version
 
