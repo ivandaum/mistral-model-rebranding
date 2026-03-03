@@ -36,28 +36,30 @@
 	/* --animate-cta: cta-animation 1s ease-in-out;
 	--animate-pop-in: pop-in 1s ease-in-out;
 	--animate-bounce-in: bounce-in 1.25s ease-in-out; */
-	--animate-scale-in: scale-in 300ms ease-in-out;
-	--animate-translate-cta-arrow: translate-cta-arrow 250ms ease-in-out;
+	--animate-blink-twice: animate-blink-twice 350ms linear;
+	--animate-cta-letter: animate-cta-letter 350ms linear;
 }
 
-@keyframes scale-in {
-	100%,
-	0% {
-		transform: scale3d(1, 1, 1);
+@keyframes animate-cta-letter {
+	0%,
+	90% {
+		opacity: 0;
 	}
-
-	50% {
-		transform: scale3d(1.1, 1.1, 1.1);
-	}
-}
-
-@keyframes translate-cta-arrow {
-	0% {
-		transform: translateX(0%);
-	}
-
 	100% {
-		transform: translateX(100%);
+		opacity: 1;
+	}
+}
+
+@keyframes animate-blink-twice {
+	0%,
+	49%,
+	75%,
+	90% {
+		opacity: 0;
+	}
+	50%,
+	100% {
+		opacity: 1;
 	}
 }
 /* 

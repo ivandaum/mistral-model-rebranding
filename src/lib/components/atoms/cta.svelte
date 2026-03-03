@@ -8,6 +8,8 @@
 
 	import arrow from '$lib/assets/chevron-right.svg';
 	import LetterAnimated from './letter-animated.svelte';
+	import { randomDelay } from '$lib/utils/random-delay';
+	import { explodeHtmlString } from '$lib/utils/explode-html-string';
 
 	let { href, text, ...props }: CtaComponentProps = $props();
 
@@ -18,10 +20,12 @@
 
 	let timeout: NodeJS.Timeout | undefined;
 
+	const STEP = 20;
+
 	const onMouseEnter = () => {
 		hasFadeIn = false;
 		clearTimeout(timeout);
-		timeout = setTimeout(() => (hasFadeIn = true), 20 * text.split('').length);
+		timeout = setTimeout(() => (hasFadeIn = true), STEP * text.split('').length);
 	};
 
 	onMount(() => {
@@ -46,7 +50,7 @@
 	class={cn(
 		'relative inline-flex border border-mistral-text-1 font-normal',
 		// transitions
-		'transition-all duration-400 ease-in-out hover:text-mistral-orange',
+		'transition-all duration-400 ease-in-out hover:text-mistral-orange hover:[&_img]:animate-blink-twice',
 		{
 			'opacity-0': !showElement
 		},
@@ -58,22 +62,10 @@
 >
 	{#if text}
 		<p class="relative z-10 py-2 pl-4 text-nowrap">
-			<LetterAnimated {text} regex="" class="duration-50" step={20} rand={1} show={hasFadeIn} />
+			<LetterAnimated {text} class="duration-50" step={STEP} rand={1} show={hasFadeIn} />
 		</p>
 	{/if}
-	<span class="relative z-10 flex size-10 shrink-0 items-center justify-end gap-1 overflow-hidden">
-		{#each Array.from(Array(2)) as a}
-			<span
-				class={cn(
-					'flex size-10 shrink-0 items-center justify-center',
-					// transitions
-					{
-						'animate-translate-cta-arrow': hasFadeIn
-					}
-				)}
-			>
-				<img class="size-3 translate-y-[1px]" src={arrow} alt={arrow + a} />
-			</span>
-		{/each}
-	</span>
+	<p class="relative z-10 flex size-10 shrink-0 items-center justify-center gap-1 overflow-hidden">
+		<img class="size-3 translate-y-px" src={arrow} alt={arrow} />
+	</p>
 </a>
