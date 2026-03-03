@@ -4,7 +4,7 @@
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
 	import Tabs from '$lib/components/modules/tabs.svelte';
-	import BackgroundGrid from '../atoms/background-grid.svelte';
+	import BackgroundGrid from '$lib/components/atoms/background-grid.svelte';
 
 	let index = $state(0);
 

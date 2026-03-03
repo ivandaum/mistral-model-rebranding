@@ -9,7 +9,7 @@
 
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
-	import BackgroundGrid from '../atoms/background-grid.svelte';
+	import BackgroundGrid from '$lib/components/atoms/background-grid.svelte';
 
 	const RAF_KEY = 'home_intro_parallax';
 
