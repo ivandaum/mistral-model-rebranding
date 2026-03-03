@@ -6,6 +6,6 @@
 
 <section class="flex w-full max-w-7xl flex-col justify-center px-4">
 	<Title headline="Ready to get started?" heading="h2" class="pt-50 pb-50">
-		<Cta href="https://mistral.ai/contact">Get your commercial license</Cta>
+		<Cta href="https://mistral.ai/contact" text="Get your commercial license" />
 	</Title>
 </section>

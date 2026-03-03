@@ -26,7 +26,7 @@
 					<p>{model.description}</p>
 				</div>
 
-				<Cta class="mt-4" href={model.link}>Learn more</Cta>
+				<Cta class="mt-4" href={model.link} text="Learn more" />
 			</div>
 		{/each}
 	</div>
@@ -56,6 +56,6 @@
 			{/each}
 		</div>
 
-		<Cta href="https://docs.mistral.ai/getting-started/models">Download weights</Cta>
+		<Cta href="https://docs.mistral.ai/getting-started/models" text="Download weights" />
 	</div>
 </section>

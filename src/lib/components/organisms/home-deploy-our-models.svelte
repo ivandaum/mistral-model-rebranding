@@ -21,7 +21,7 @@
 					{model.text}
 				</p>
 
-				<Cta href={model.link}>{model.cta}</Cta>
+				<Cta href={model.link} text={model.cta} />
 			</div>
 		{/each}
 	</div>

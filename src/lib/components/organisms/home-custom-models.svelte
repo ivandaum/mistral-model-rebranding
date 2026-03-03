@@ -36,7 +36,7 @@
 							{item.text}
 						</p>
 
-						<Cta href={item.ctaLink}>{item.cta}</Cta>
+						<Cta href={item.ctaLink} text={item.cta} />
 					</div>
 
 					<img alt="" class="w-1/2" src={item.image} />

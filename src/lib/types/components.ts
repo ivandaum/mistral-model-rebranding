@@ -10,6 +10,7 @@ export type ComponentProps = {
 
 export type CtaComponentProps = ComponentProps & {
 	href?: string;
+	text: string;
 };
 
 export type TitleComponentProps = ComponentProps & {
@@ -27,4 +28,14 @@ export type TabsComponentProps = ComponentProps & {
 	items: string[];
 	value: number;
 	onselect?: (index: number) => void;
+};
+
+export type LetterAnimatedComponentProps = ComponentProps & {
+	text: string;
+	show: boolean;
+	step: number;
+	regex?: string;
+	maxDelay?: number;
+	delayOffset?: number;
+	rand?: number;
 };

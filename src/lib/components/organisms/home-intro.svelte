@@ -9,6 +9,6 @@
 		text="State of the art models with cutting edge capabilities, from cloud to edge."
 		heading="h1"
 	>
-		<Cta href="https://mistral.ai/contact" class="bg-mistral-bg-yellow">Contact sales</Cta>
+		<Cta href="https://mistral.ai/contact" class="bg-mistral-bg-yellow" text="Contact sales" />
 	</Title>
 </section>

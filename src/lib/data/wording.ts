@@ -1,3 +1,47 @@
+export const MODELS_EXAMPLES = [
+	{
+		title: 'Mistral Small',
+		link: 'https://mistral.ai/news/mistral-small-3-1',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F0fb28e38-59a9-487f-ba7c-9eda7de7358a&w=96&q=75'
+	},
+	{
+		title: 'Codestral',
+		link: '#',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc80b4470-f614-4081-a7ee-b491e8c505e4&w=128&q=75'
+	},
+	{
+		title: 'Mistral Medium',
+		link: '#',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Ffefb95db-897b-4a48-a9ab-ed0ac4273d65&w=96&q=75'
+	},
+	{
+		title: 'Mistral_Large',
+		link: '#',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F91468458-df5a-483b-88de-94438e143728&w=96&q=75'
+	},
+	{
+		title: 'Voxtral',
+		link: '#',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc29ca011-87ff-45b0-8236-08d629812732&w=96&q=75'
+	},
+	{
+		title: 'Document AI',
+		link: '#',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fda02ec85-9da0-4d26-b25f-07069eb77dde&w=64&q=75'
+	},
+	{
+		title: 'Nemo',
+		link: '#',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc33ba3c9-04a1-41af-95e1-fe4878c851ae&w=96&q=75'
+	}
+];
 export const COMMERCIAL_MODELS = [
 	{
 		title: 'Mistral Large 3',
@@ -12,6 +56,8 @@ export const COMMERCIAL_MODELS = [
 	{
 		title: 'Ministral Family',
 		intro: '3B, 8B, and 14B brings best-in-class frontier AI to the edge. ',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Faf7bbcdd-dc1a-432e-b020-0f1515b7ce54&w=64&q=75',
 		description:
 			'Combining compact efficiency with multimodal and multilingual capability. Engineered for edge devices, self-hosted systems, and robotics, these models seamlessly blend language, vision, and reasoning into highly efficient architectures',
 		link: 'https://mistral.ai/news/mistral-3'
@@ -55,6 +101,8 @@ export const COMMERCIAL_MODELS = [
 	{
 		title: 'Voxtral',
 		intro: 'Voxtral is a family of audio models with state-of-the-art speech to text capabilities.',
+		image:
+			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc29ca011-87ff-45b0-8236-08d629812732&w=96&q=75',
 		description:
 			'It delivers the right balance between frontier performance, affordable pricing, and flexible deployments.',
 		link: 'https://mistral.ai/news/voxtral'
