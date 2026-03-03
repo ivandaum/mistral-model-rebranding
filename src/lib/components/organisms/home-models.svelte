@@ -6,13 +6,10 @@
 	import Raf from '$lib/utils/raf';
 	import { cn } from '$lib/utils/cn';
 	import { observer } from '$lib/utils/observer';
-
-	import arrowRight from '$lib/assets/arrow-right.svg';
-
-	import Cta from '$lib/components/atoms/cta.svelte';
-	import Subtitle from '$lib/components/modules/subtitle.svelte';
 	import { sectionScrollProgress } from '$lib/utils/section-scroll-progress';
-	import CardModel from '../modules/card-model.svelte';
+
+	import Subtitle from '$lib/components/modules/subtitle.svelte';
+	import CardModel from '$lib/components/modules/card-model.svelte';
 
 	let contentWidth = 0;
 
@@ -67,8 +64,9 @@
 	<div class="md:h-[300dvh]" bind:this={stickyContainerEl} style={`--x:-${x}px`}>
 		<div class="sticky top-8 left-0 flex flex-col justify-start overflow-x-hidden py-4">
 			<Subtitle
-				headline="Tailored <img class='inline-block size-8' src='https://cms.mistral.ai/assets/5708523c-f221-47bb-bb62-d052ee70bbc6.svg?width=32&height=22' /> for You. <br />Our premier models are designed to be yours to tune, customize, distill, and deploy. "
+				headline="Tailored <img class='inline-block size-8' src='https://cms.mistral.ai/assets/5708523c-f221-47bb-bb62-d052ee70bbc6.svg?width=32&height=22' /> for You. <br> Our premier models are designed to be yours to tune, customize, distill, and deploy. "
 				text="Available for commercial use."
+				heading="h2"
 				class="m-auto max-w-7xl px-4"
 			/>
 			<div class={cn('m-auto mb-8 w-full max-w-7xl')}>

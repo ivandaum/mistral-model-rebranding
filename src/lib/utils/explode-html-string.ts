@@ -2,6 +2,7 @@
 // TODO : deal with imbricated balises
 export const explodeHtmlString = (text: string, regex: string = ''): string[] => {
 	const letters = text.split(regex);
+
 	const str: string[] = [];
 
 	let isInBalise = false;
@@ -9,18 +10,18 @@ export const explodeHtmlString = (text: string, regex: string = ''): string[] =>
 
 	letters.forEach((l) => {
 		// closing balise, we clean the tmp variables
-		if (l === '>') {
+		if (l.match('>')) {
 			tmpBalise += l;
 			isInBalise = false;
 			str.push(tmpBalise);
 			tmpBalise = '';
 		}
 		// new balise, we start the process
-		else if (l === '<') {
+		else if (l.match('<')) {
 			isInBalise = true;
 			tmpBalise += l;
 		} else if (isInBalise) {
-			tmpBalise += l;
+			tmpBalise += regex + l;
 		} else {
 			str.push(l);
 		}

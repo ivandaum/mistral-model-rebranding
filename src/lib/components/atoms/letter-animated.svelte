@@ -24,7 +24,10 @@
 			{
 				'opacity-0': !show
 			},
-			props.class
+			props.class,
+			{
+				'block h-0': ['<br>', '<br />'].includes(letter)
+			}
 		)}
 	>
 		{@html letter}
