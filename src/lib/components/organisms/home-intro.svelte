@@ -5,11 +5,11 @@
 
 	import { observer } from '$lib/utils/observer';
 	import { sectionScrollProgress } from '$lib/utils/section-scroll-progress';
+	import { lerp } from '$lib/utils/math';
 
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
 	import BackgroundGrid from '../atoms/background-grid.svelte';
-	import { lerp } from '$lib/utils/math';
 
 	const RAF_KEY = 'home_intro_parallax';
 
@@ -20,7 +20,7 @@
 	const animate = (t: number) => {
 		if (!containerEl) return;
 
-		y = lerp(0, 100, t);
+		y = lerp(0, 25, t);
 	};
 
 	const onShow = () => {
@@ -49,7 +49,7 @@
 	});
 </script>
 
-<section class="h-auto w-full" bind:this={containerEl} style={`--y:${y}px`}>
+<section class="h-auto w-full" bind:this={containerEl} style={`--y:${y}%`}>
 	<BackgroundGrid class="flex min-h-dvh w-full items-center justify-center">
 		<Title
 			headline="It starts with frontier science."

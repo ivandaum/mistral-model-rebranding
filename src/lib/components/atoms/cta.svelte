@@ -52,8 +52,7 @@
 		// transitions
 		'transition-all duration-400 ease-in-out hover:text-mistral-orange hover:[&_img]:animate-blink-twice',
 		{
-			'opacity-0': !showElement,
-			'animate-blink-twice': showElement
+			'translate-y-2 opacity-0': !showElement
 		},
 		props.class
 	)}

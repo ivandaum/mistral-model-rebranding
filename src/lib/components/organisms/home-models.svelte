@@ -44,7 +44,8 @@
 	const animate = (t: number) => {
 		if (!stickyContainerEl) return;
 
-		easedX = t * contentWidth;
+		easedX = Math.min(1, Math.max(0, t));
+		easedX = easedX * contentWidth;
 		x += Math.floor((easedX - x) * 0.1);
 	};
 
@@ -58,7 +59,7 @@
 		// // TODO : deal with windowHeight < rect height
 		// // may break the scroll
 		// height = rect?.height - window.innerHeight;
-		const { init, getScroll } = sectionScrollProgress(stickyContainerEl, window.innerHeight);
+		const { init, getScroll } = sectionScrollProgress(stickyContainerEl, 0, window.innerHeight);
 
 		contentWidth = stickyEl.getBoundingClientRect().width - MAX_WIDTH;
 

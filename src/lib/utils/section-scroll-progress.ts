@@ -1,7 +1,11 @@
 import { currentScroll } from '$lib/utils/current-scroll';
 import { normalize, round } from '$lib/utils/math';
 
-export const sectionScrollProgress = (section: HTMLElement, scrollOffset: number = 0) => {
+export const sectionScrollProgress = (
+	section: HTMLElement,
+	scrollOffset: number = 0,
+	scrollableAreaOffset: number = 0
+) => {
 	if (!section) return { init: () => null, getScroll: () => null };
 	let height = 0,
 		top = 0;
@@ -12,15 +16,14 @@ export const sectionScrollProgress = (section: HTMLElement, scrollOffset: number
 
 			// save location to be sure to scroll at the right path
 			top = rect.top + currentScroll();
-			// TODO : deal with scrollOffset < rect height
+			// TODO : deal with scrollableAreaOffset < rect height
 			// may break the scroll
-			height = rect?.height - scrollOffset;
+			height = rect?.height - scrollableAreaOffset;
 		},
 
 		getScroll: (callback: (t: number) => void) => {
 			// check where the current scroll is in the section
-			let t = normalize(currentScroll(), top, top + height);
-			t = Math.min(1, Math.max(0, t));
+			let t = normalize(currentScroll() + scrollOffset, top, top + height);
 			t = round(t);
 
 			callback(t);
