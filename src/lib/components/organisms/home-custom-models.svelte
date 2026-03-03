@@ -4,6 +4,7 @@
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
 	import Tabs from '$lib/components/modules/tabs.svelte';
+	import BackgroundGrid from '../atoms/background-grid.svelte';
 
 	let index = $state(0);
 
@@ -20,30 +21,32 @@
 	/>
 
 	<Tabs value={index} items={['Custom pre-training', 'Fine-tuning']} onselect={onSelectTab} />
-	<div class=" bg-grid-size-md bg-grid-pattern relative items-center px-4 pt-[73px] pb-[77px]">
-		{#each CUSTOM_MODELS as item, i}
-			{#if index === i}
-				<div class="flex w-full items-center gap-8">
-					<div class="w-1/2">
-						<h3
-							class="text-foreground mb-[35px] max-w-[410px] text-[24px]/[27.6px] font-normal md:mb-[38px] md:text-[32px]/[36.8px]"
-						>
-							{item.title}
-						</h3>
-						<p
-							class="text-foreground mb-[35px] max-w-[410px] text-base/[19.6px] font-normal md:mb-11"
-						>
-							{item.text}
-						</p>
+	<BackgroundGrid>
+		<div class=" bg-grid-size-md bg-grid-pattern relative items-center px-4 pt-[73px] pb-[77px]">
+			{#each CUSTOM_MODELS as item, i}
+				{#if index === i}
+					<div class="flex w-full items-center gap-8">
+						<div class="w-1/2">
+							<h3
+								class="text-foreground mb-[35px] max-w-[410px] text-[24px]/[27.6px] font-normal md:mb-[38px] md:text-[32px]/[36.8px]"
+							>
+								{item.title}
+							</h3>
+							<p
+								class="text-foreground mb-[35px] max-w-[410px] text-base/[19.6px] font-normal md:mb-11"
+							>
+								{item.text}
+							</p>
 
-						<Cta href={item.ctaLink} text={item.cta} />
+							<Cta href={item.ctaLink} text={item.cta} />
+						</div>
+
+						<img alt="" class="w-1/2" src={item.image} />
 					</div>
-
-					<img alt="" class="w-1/2" src={item.image} />
-				</div>
-			{/if}
-		{/each}
-	</div>
+				{/if}
+			{/each}
+		</div>
+	</BackgroundGrid>
 
 	<div
 		class="mt-[64px] mb-12 grid w-full grid-cols-1 border-r border-mistral-border-1 md:grid-cols-4"

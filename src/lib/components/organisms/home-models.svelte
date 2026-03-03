@@ -37,7 +37,6 @@
 		tmpX = round(tmpX);
 
 		easedX = tmpX * contentWidth;
-
 		x += Math.floor((easedX - x) * 0.1);
 	};
 
@@ -75,7 +74,7 @@
 </script>
 
 <section class="flex w-full flex-col">
-	<div class="md:h-[200dvh]" bind:this={stickyContainerEl} style={`--x:-${x}px`}>
+	<div class="md:h-[300dvh]" bind:this={stickyContainerEl} style={`--x:-${x}px`}>
 		<div class="sticky top-8 left-0 flex flex-col justify-start overflow-x-hidden py-4">
 			<Subtitle
 				headline="Tailored <img class='inline-block size-8' src='https://cms.mistral.ai/assets/5708523c-f221-47bb-bb62-d052ee70bbc6.svg?width=32&height=22' /> for You. <br />Our premier models are designed to be yours to tune, customize, distill, and deploy. "
@@ -85,7 +84,7 @@
 			<div class={cn('m-auto mb-8 w-full max-w-7xl')}>
 				<div
 					style="transform: translate3d(calc(var(--x)), 0px, 0px)"
-					class="flex w-full snap-x snap-mandatory gap-2 overflow-x-scroll px-4 md:w-max md:snap-none md:overflow-visible"
+					class="flex w-full snap-x snap-mandatory gap-2 overflow-x-scroll px-4 will-change-transform md:w-max md:snap-none md:overflow-visible"
 					bind:this={stickyEl}
 				>
 					{#each COMMERCIAL_MODELS as model, i}
