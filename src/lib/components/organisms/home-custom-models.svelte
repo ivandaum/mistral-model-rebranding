@@ -24,7 +24,6 @@
 			rootMargin: '0px 0px -150px 0px',
 			onShow: () => {
 				index === -1 ? (index = 0) : null;
-				console.log('show');
 			}
 		});
 

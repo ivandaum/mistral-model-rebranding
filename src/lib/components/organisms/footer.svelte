@@ -90,8 +90,7 @@
 							decoding="async"
 							data-nimg="1"
 							style="color:transparent"
-							srcset="/_next/image?url=%2Fimg%2Fappstore.svg&amp;w=128&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764 1x, /_next/image?url=%2Fimg%2Fappstore.svg&amp;w=256&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764 2x"
-							src="/_next/image?url=%2Fimg%2Fappstore.svg&amp;w=256&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764"
+							src="https://mistral.ai/_next/image?url=%2Fimg%2Fappstore.svg&w=256&q=75&dpl=103d87ff51b8a1deec96318aa3fa5b0db974d64e88fcc2d582aba2f3f43d5df5363961366537383538643231373030396235383136363333"
 						/></a
 					><a target="_blank" href="https://play.google.com/store/apps/details?id=ai.mistral.chat"
 						><img
@@ -102,8 +101,7 @@
 							decoding="async"
 							data-nimg="1"
 							style="color:transparent"
-							srcset="/_next/image?url=%2Fimg%2Fandroidstore.svg&amp;w=128&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764 1x, /_next/image?url=%2Fimg%2Fandroidstore.svg&amp;w=256&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764 2x"
-							src="/_next/image?url=%2Fimg%2Fandroidstore.svg&amp;w=256&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764"
+							src="https://mistral.ai/_next/image?url=%2Fimg%2Fandroidstore.svg&w=256&q=75&dpl=103d87ff51b8a1deec96318aa3fa5b0db974d64e88fcc2d582aba2f3f43d5df5363961366537383538643231373030396235383136363333"
 						/></a
 					>
 				</div>
@@ -205,8 +203,7 @@
 							data-nimg="1"
 							class="size-[38px] p-2.5 dark:invert"
 							style="color:transparent"
-							srcset="/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F9c3aec2e-9825-4691-8458-cf4bd48ceff5&amp;w=48&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F9c3aec2e-9825-4691-8458-cf4bd48ceff5&amp;w=96&amp;q=75 2x"
-							src="/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F9c3aec2e-9825-4691-8458-cf4bd48ceff5&amp;w=96&amp;q=75"
+							src="https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F9c3aec2e-9825-4691-8458-cf4bd48ceff5&w=96&q=75"
 						/></a
 					><a
 						target="_blank"
@@ -223,8 +220,7 @@
 							data-nimg="1"
 							class="size-[38px] p-2.5 dark:invert"
 							style="color:transparent"
-							srcset="/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fb68af65f-220d-4116-b522-fe9ab25c7f32&amp;w=48&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fb68af65f-220d-4116-b522-fe9ab25c7f32&amp;w=96&amp;q=75 2x"
-							src="/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fb68af65f-220d-4116-b522-fe9ab25c7f32&amp;w=96&amp;q=75"
+							src="https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fb68af65f-220d-4116-b522-fe9ab25c7f32&w=96&q=75"
 						/></a
 					><a
 						target="_blank"
@@ -241,8 +237,7 @@
 							data-nimg="1"
 							class="size-[38px] p-2.5 dark:invert"
 							style="color:transparent"
-							srcset="/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F0f8631ea-bfbc-4075-8f2e-c8f681076d7b&amp;w=48&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F0f8631ea-bfbc-4075-8f2e-c8f681076d7b&amp;w=96&amp;q=75 2x"
-							src="/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F0f8631ea-bfbc-4075-8f2e-c8f681076d7b&amp;w=96&amp;q=75"
+							src="https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F0f8631ea-bfbc-4075-8f2e-c8f681076d7b&w=96&q=75"
 						/></a
 					>
 				</div>

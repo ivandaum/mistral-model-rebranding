@@ -24,22 +24,6 @@
 					style="color:transparent"
 					src="https://mistral.ai/_next/image?url=%2Fimg%2Fmistral-ai-logo.svg&w=256&q=75&dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764"
 				/>
-				<div
-					class="pointer-events-none absolute inset-0 flex items-center justify-center overflow-hidden transition-all duration-500 ease-in-out"
-					style="clip-path:inset(100% 0 0 0);-webkit-clip-path:inset(100% 0 0 0)"
-				>
-					<img
-						alt="Mistral AI Logo White"
-						width="100"
-						height="100"
-						decoding="async"
-						data-nimg="1"
-						class="absolute object-contain"
-						style="color:transparent"
-						srcset="/_next/image?url=%2Fimg%2Fmistral-ai-logo-white.svg&amp;w=128&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764 1x, /_next/image?url=%2Fimg%2Fmistral-ai-logo-white.svg&amp;w=256&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764 2x"
-						src="/_next/image?url=%2Fimg%2Fmistral-ai-logo-white.svg&amp;w=256&amp;q=75&amp;dpl=0dd24beb3955b26c79ed2326818d15f93bb8e9a88eed4b1d249a29fb095b2e15363961353638643532346132396134313263383164343764"
-					/>
-				</div>
 				<div class="pointer-events-none absolute inset-0"></div></a
 			>
 			<nav class="hidden items-center gap-6 lg:flex" aria-label="Main navigation">
