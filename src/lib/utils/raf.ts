@@ -27,7 +27,6 @@ class Raf {
 	}
 
 	add(id: string, callback: (t: number) => void) {
-		console.log('---> animation added :', id);
 		if (!this.callbacks.has(id)) {
 			this.callbacks.set(id, callback);
 			this.startIfNeeded();
@@ -35,7 +34,6 @@ class Raf {
 	}
 
 	remove(id: string) {
-		console.log('# animation removed :', id);
 		this.callbacks.delete(id);
 		if (this.callbacks.size === 0) {
 			this.stop();

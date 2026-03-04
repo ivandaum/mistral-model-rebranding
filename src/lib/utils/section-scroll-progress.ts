@@ -1,5 +1,5 @@
 import { currentScroll } from '$lib/utils/current-scroll';
-import { normalize, round } from '$lib/utils/math';
+import { normalize } from '$lib/utils/math';
 
 // TODO: make a proper svelte hook ?
 // this tool will allow use to get the current scroll in a given section
@@ -18,7 +18,8 @@ export const sectionScrollProgress = (
 	}
 
 	let height = 0,
-		top = 0;
+		top = 0,
+		bottom = 0;
 
 	return {
 		init: () => {
@@ -29,13 +30,13 @@ export const sectionScrollProgress = (
 			// TODO : deal with scrollableAreaOffset < rect height
 			// may break the scroll
 			height = rect?.height - scrollableAreaOffset;
+
+			bottom = top + height;
 		},
 
 		onScroll: (callback: (t: number) => void) => {
 			// check where the current scroll is in the section
-			let t = normalize(currentScroll() + scrollOffset, top, top + height);
-			t = round(t);
-
+			const t = normalize(currentScroll() + scrollOffset, top, bottom);
 			callback(t);
 		}
 	};
