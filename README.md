@@ -22,7 +22,6 @@ Misc
 
 - Normalize h1 & h2 to make a better visual hierarchy
 - h1 level paragraph have a "robotic/8bit" fade-in
-- h1 have a parallax effect on scroll
 - h2-h3 level paragraph have a smooth "futuristic" fade-in
 - icon blink when hovered/activated
 
@@ -41,7 +40,7 @@ Section: "tailored for your"
 
 - Model cards has been added side-to-side to be able to read more than one at once
 - Having them all available right away also help the user to compare models next to each others
-- Parallax effect on scroll, added the effect of the card "unfolding" when it appears to keep the previous animation spirit
+- Parallax effect on scroll, added the effect of the card "unfolding" when it appears to keep the original animation idea
 
 Section: "Free open-weight models"
 
