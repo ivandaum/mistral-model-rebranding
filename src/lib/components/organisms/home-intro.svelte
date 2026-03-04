@@ -57,7 +57,7 @@
 			headline="It starts with frontier science."
 			text="State of the art models with cutting edge capabilities, from cloud to edge."
 			heading="h1"
-			class="z-10 max-w-7xl translate-y-(--y) bg-radial from-mistral-bg-yellow from-60% to-transparent p-10"
+			class="z-10 max-w-7xl translate-y-(--y) bg-radial from-mistral-bg-yellow from-60% to-transparent to-90% p-10"
 		>
 			<Cta
 				href="https://mistral.ai/contact"

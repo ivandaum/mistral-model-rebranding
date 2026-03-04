@@ -7,6 +7,7 @@ Everything you need to build a Svelte project, powered by [`sv`](https://github.
 - Chatbot animation (text abruptly appearing and disappearing)
 - 8 bit & Robot references (motion with low FPS, pixelated animation, blinking cursor, scrolling information)
 - Mistral branding (color scheme, playing on shapes of yellow -> orange)
+- Mistral square & rectangular shape as it identity : re-enforce the shape to uniformize interactive elements (button, cards)
 
 Motion references :
 
@@ -21,13 +22,26 @@ be playfull and fun, while still leaving the content readable and accessible rig
 
 ## Improvements
 
+Misc
+
 - Normalize h1 & h2 to make a better visual hierarchy
 - h1 level paragraph have a "robotic/8bit" fade-in
 - h1 have a parallax effect on scroll
 - h2-h3 level paragraph have a smooth "futuristic" fade-in
-- Model cards has been added side-to-side to be able to read more than one at once, and have a parallax effect on scroll as well
+
+Button
+
 - Cta have a "chat is answering" / "chat is thinking" effect on hover, while the arrow icon is blinking like a cursor
-- All animations are active in the mobile version
+- Cta has been transformed to a square shape to be more consistent with the rest of the design
+
+Sliders
+
+- The scrolling slider has been transformed to a grid of Mistral model. Each card is now square to keep them at the same level of importance
+
+Models
+
+- Model cards has been added side-to-side to be able to read more than one at once, and have a parallax effect on scroll
+- Having them available right away also help the user to compare models next to each others
 
 ## Live version
 

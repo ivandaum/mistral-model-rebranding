@@ -78,7 +78,6 @@
 		offsetArray([...MODELS_EXAMPLES], 3),
 		offsetArray([...MODELS_EXAMPLES], 5)
 	] as ModelProps[][];
-	console.log(data);
 </script>
 
 <div
