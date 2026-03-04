@@ -1,3 +1,6 @@
+// Raf manager :
+// Managing all animation to make sure there's always one requestAnimationFrame
+// running at the same time
 class Raf {
 	static instance: Raf | null = null;
 

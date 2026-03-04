@@ -1,10 +1,7 @@
 import type { ObserverProps } from '$lib/types/utils';
 
-/**
- * Custom IntersectionObserver
- *
- * @return IntersectionObserver
- */
+// Custom IntersectionObserver so I don't have to rewrite everything all the time
+// Is used to know when to trigger animation (if element is visible)
 export const observer = ({
 	element,
 	onShow,

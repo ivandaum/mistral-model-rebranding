@@ -1,5 +1,5 @@
 // explose title to letter while preventing balise to be cut
-// TODO : deal with imbricated balises
+// TODO : deal with imbricated balises ?
 export const explodeHtmlString = (text: string, regex: string = ''): string[] => {
 	const letters = text.split(regex);
 

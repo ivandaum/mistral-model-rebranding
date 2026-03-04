@@ -1,11 +1,14 @@
 type arrType = string | object | number;
 
+// Shuffle array
+// Not used anymore
 export const shuffleArray = (arr: arrType[]) => {
 	return arr.sort(() => Math.random() - 0.5);
 };
 
 // move the array index content by an offset
 // with offset 1 : [1, 2, 3, 4] -> [4, 1, 2, 3]
+// used to generate a grid of model in HomeIntro
 export const offsetArray = (arr: arrType[], offseting: number) => {
 	let i = offseting;
 	const r = [];
