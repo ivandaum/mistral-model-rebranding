@@ -10,7 +10,7 @@
 	import { offsetArray } from '$lib/utils/array';
 
 	import { MODELS_EXAMPLES } from '$lib/data/wording';
-	import ModelSquare from '$lib/components/modules/model-square.svelte';
+	import CardModelIcon from '$lib/components/modules/card-model-icon.svelte';
 
 	const RAF_KEY = 'home_xp_translate';
 
@@ -107,7 +107,7 @@
 							'translate-y-6 opacity-0': !show
 						})}
 					>
-						<ModelSquare {model} />
+						<CardModelIcon {model} />
 					</div>
 				{/each}
 			</div>

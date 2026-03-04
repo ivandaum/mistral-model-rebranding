@@ -19,7 +19,7 @@
 	href={model.link}
 	onclick={onClick}
 	class={cn([
-		'flex aspect-square min-h-[25dvh] min-w-[12vw] shrink-0 cursor-default flex-col items-center justify-center p-4 grayscale-100',
+		'flex aspect-square min-h-[20dvh] min-w-[12vw] shrink-0 cursor-default flex-col items-center justify-center p-4 grayscale-100',
 		'transition-all delay-500 hover:bg-mistral-yellow-1 hover:opacity-100 hover:grayscale-0 hover:delay-0'
 	])}
 >
