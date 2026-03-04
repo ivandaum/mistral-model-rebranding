@@ -12,6 +12,7 @@
 	let index = $state(-1);
 	let element: HTMLElement | undefined = $state();
 
+	// when a new tab is selected
 	const onSelectTab = (i: number) => {
 		index = i;
 	};

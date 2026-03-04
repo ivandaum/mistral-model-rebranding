@@ -1,7 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
-	import { observer } from '$lib/utils/observer';
 	import { cn } from '$lib/utils/cn';
 
 	import { DEPLOY_OUR_MODELS } from '$lib/data/wording';

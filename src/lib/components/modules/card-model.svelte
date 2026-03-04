@@ -14,18 +14,18 @@
 	let element: HTMLDivElement | undefined = $state();
 	let show = $state(false);
 
-	const onShow = () => {
-		show = true;
-	};
-
-	const onHide = () => {
-		show = false;
-	};
-
 	onMount(() => {
 		if (!element) return;
 
-		const domObserver = observer({ element, onShow, onHide });
+		const domObserver = observer({
+			element,
+			onShow: () => {
+				show = true;
+			},
+			onHide: () => {
+				show = false;
+			}
+		});
 
 		return () => {
 			domObserver.destroy();

@@ -6,7 +6,7 @@
 	import { cn } from '$lib/utils/cn';
 	import { observer } from '$lib/utils/observer';
 
-	import LetterAnimated from '$lib/components/atoms/letter-animated.svelte';
+	import AnimatedText from '$lib/components/atoms/animated-text.svelte';
 
 	const { headline, text, heading = 'h2', ...props }: TitleComponentProps = $props();
 
@@ -39,7 +39,7 @@
 	bind:this={elementRef}
 >
 	<p class="mb-4 text-[30px]/[34.5px] md:max-w-[75%] md:text-5xl/[50px]">
-		<LetterAnimated
+		<AnimatedText
 			regex=" "
 			text={headline}
 			step={25}

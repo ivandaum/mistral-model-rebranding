@@ -20,7 +20,9 @@ export const explodeHtmlString = (text: string, regex: string = ''): string[] =>
 		else if (l.match('<')) {
 			isInBalise = true;
 			tmpBalise += l;
-		} else if (isInBalise) {
+		}
+		// if balise isn't close yet, we continue adding the string
+		else if (isInBalise) {
 			tmpBalise += regex + l;
 		} else {
 			str.push(l);

@@ -13,11 +13,10 @@
 		<div class="flex flex-wrap justify-center gap-4">
 			<Cta
 				href="https://auth.mistral.ai/ui/login?flow=b85e6c5d-4960-4a6f-81eb-c4d521110d6a"
-				class="bg-mistral-bg-yellow"
 				text="Try our models"
 			/>
-			<Cta href="https://doc.mistral.ai" class="bg-mistral-bg-yellow" text="Read our docs" />
-			<Cta href="https://mistral.ai/contact" class="bg-mistral-bg-yellow" text="Talk to our team" />
+			<Cta href="https://doc.mistral.ai" text="Read our docs" />
+			<Cta href="https://mistral.ai/contact" text="Talk to our team" />
 		</div>
 	</Title>
 </section>

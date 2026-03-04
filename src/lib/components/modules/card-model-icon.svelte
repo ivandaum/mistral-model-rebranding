@@ -4,6 +4,8 @@
 
 	const { model }: ModelSquareComponentProps = $props();
 
+	// when clicking on a link which is an anchor inside the page
+	// we stop the navigation and we smooth scroll to the element
 	const onClick = (e: Event) => {
 		if (model.link.startsWith('#')) {
 			e.preventDefault();

@@ -8,6 +8,7 @@
 
 	let index = $derived(value);
 
+	// when pressing a tab
 	const onSelectHandler = (i: number) => {
 		onselect?.(i);
 	};

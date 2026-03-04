@@ -20,24 +20,25 @@
 	let slider: HTMLDivElement | undefined = $state();
 	let sliderContainer: HTMLDivElement | undefined = $state();
 
+	// the raf unique id
 	const RAF_KEY = 'sticky-model';
-	// hardcoded magic number, is equal to container max width;
 
 	let x: number = $state(0);
 	let easedX = 0;
 
-	// in requestAnimation, control the `t` value and calculate the smooth new value
+	// this will be fired inside a requestAnimation
 	const animate = (t: number) => {
 		if (!scrollable) return;
 
-		// eased X for smooth translate
+		// control the `t` value and calculate the smooth new value
 		const limited = Math.min(1, Math.max(0, t));
 
+		// eased X for smooth translate
 		easedX = limited * contentWidth;
 		x += (easedX - x) * 0.1;
 	};
 
-	// get the right scrollable area height and init animation
+	// on show, get init the calculation of the scrollable area height
 	const onShow = () => {
 		if (!scrollable || !slider) return;
 
@@ -55,6 +56,8 @@
 		raf.add(RAF_KEY, () => onScroll?.((t) => animate(t)));
 	};
 
+	// when element is hidden
+	// stop the animation
 	const onHide = () => {
 		const raf = Raf.getInstance();
 		raf.remove(RAF_KEY);

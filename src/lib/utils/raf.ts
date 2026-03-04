@@ -1,6 +1,6 @@
 // Raf manager :
-// Managing all animation to make sure there's always one requestAnimationFrame
-// running at the same time
+// Managing all animation to make sure there's always one requestAnimationFrame running at the same time
+// will allow user to dynamically add/remove animation
 class Raf {
 	static instance: Raf | null = null;
 

@@ -5,6 +5,7 @@
 	import Parallax from '$lib/components/atoms/parallax.svelte';
 	import { MODELS_EXAMPLES } from '$lib/data/wording';
 
+	// data formating so I can easily update it
 	const sections = [
 		{
 			classNames: 'z-1',

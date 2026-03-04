@@ -39,6 +39,7 @@
 		<div class="grid-wrap mb-4 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
 			{#each FREE_MODELS as model, i}
 				<a
+					// custom delay for fade-in
 					style={`--delay: ${i * 100}ms`}
 					class={cn(
 						'flex flex-col justify-between border border-mistral-yellow-2 p-6 md:aspect-4/3 ',

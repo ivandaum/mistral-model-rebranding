@@ -7,14 +7,14 @@
 	import { observer } from '$lib/utils/observer';
 
 	import arrow from '$lib/assets/chevron-right.svg';
-	import LetterAnimated from '$lib/components/atoms/letter-animated.svelte';
+	import AnimatedText from '$lib/components/atoms/animated-text.svelte';
 
 	let { href, text, ...props }: CtaComponentProps = $props();
 
 	let element: HTMLAnchorElement | undefined = $state();
 	let showElement = $state(false);
 
-	// step between each letters animation
+	// step to animate each letters, to be sure they fade-in after their previous one
 	const STEP = 15;
 
 	onMount(() => {
@@ -40,6 +40,7 @@
 		'relative inline-flex border border-mistral-text-1 font-normal',
 		// transitions
 		'transition-all duration-400 ease-in-out',
+		// hover states
 		'hover:[&_img]:animate-blink-twice hover:[&_span]:animate-cta-letter hover:[&_span]:text-mistral-orange',
 		{
 			'translate-y-2 opacity-0': !showElement
@@ -52,7 +53,7 @@
 >
 	{#if text}
 		<p class="relative z-10 py-2 pl-4 text-nowrap">
-			<LetterAnimated
+			<AnimatedText
 				{text}
 				class="duration-150"
 				style="animation-delay: var(--delay);"

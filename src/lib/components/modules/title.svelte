@@ -6,7 +6,7 @@
 	import { cn } from '$lib/utils/cn';
 	import { observer } from '$lib/utils/observer';
 
-	import LetterAnimated from '$lib/components/atoms/letter-animated.svelte';
+	import AnimatedText from '$lib/components/atoms/animated-text.svelte';
 
 	const { headline, text, heading, ...props }: TitleComponentProps = $props();
 
@@ -41,14 +41,15 @@
 		class="text-foreground mb-8 flex items-center gap-2 text-[40px]/[42px] font-normal md:mb-5 md:text-7xl/[72px]"
 	>
 		<p>
-			<LetterAnimated text={headline} step={25} maxDelay={750} {show} />
+			<AnimatedText text={headline} step={25} maxDelay={750} {show} />
 		</p>
 	</svelte:element>
+
 	{#if text}
 		<p
 			class="text-foreground mb-8 max-w-200 flex-wrap text-xl/[21.6px] font-normal md:mb-10 md:text-2xl/[27px]"
 		>
-			<LetterAnimated
+			<AnimatedText
 				{text}
 				regex=" "
 				step={25}

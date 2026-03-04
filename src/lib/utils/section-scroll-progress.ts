@@ -4,7 +4,7 @@ import { normalize } from '$lib/utils/math';
 // TODO: make a proper svelte hook ?
 // this tool will allow use to get the current scroll in a given section
 // to know how much we have scrolled in it
-// will return "r" (0 -> 1) based on the progress
+// function onScroll will return a value from 0 to 1, based on the progress
 export const sectionScrollProgress = (
 	section: HTMLElement,
 	scrollOffset: number = 0,

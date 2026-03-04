@@ -7,7 +7,7 @@
 	import { normalize, round } from '$lib/utils/math';
 	import { cn } from '$lib/utils/cn';
 	import { randomDelay } from '$lib/utils/random-delay';
-	import { offsetArray } from '$lib/utils/array';
+	import { reorganizeArray } from '$lib/utils/reorganize-array';
 
 	import { MODELS_EXAMPLES } from '$lib/data/wording';
 	import CardModelIcon from '$lib/components/modules/card-model-icon.svelte';
@@ -21,7 +21,9 @@
 	let element: HTMLDivElement | undefined = $state();
 	let x = $state(0);
 	let y = $state(0);
+	let show = $state(false);
 
+	// when user move its mouse, we calculate the mouse position in the window
 	const onMouseMove = (e: MouseEvent) => {
 		const { clientX, clientY } = e;
 
@@ -34,9 +36,7 @@
 		position[1] = round((normalize(clientY, 0, h) - 0.5) * 2);
 	};
 
-	let show = $state(false);
-
-	// animate eased --x and --y
+	// animate eased --x and --y, fired inside a requestAnimationFrame
 	const animate = () => {
 		const reachX = position[0] * 15;
 		x += (reachX - x) * 0.05;
@@ -70,15 +70,15 @@
 		};
 	});
 
+	// data formating to generate the grid
 	const data = [...MODELS_EXAMPLES, ...MODELS_EXAMPLES];
-
 	const rows = [
 		data,
-		offsetArray(data, 2),
-		offsetArray(data, 4),
-		offsetArray(data, 1),
-		offsetArray(data, 3),
-		offsetArray(data, 5)
+		reorganizeArray(data, 2),
+		reorganizeArray(data, 4),
+		reorganizeArray(data, 1),
+		reorganizeArray(data, 3),
+		reorganizeArray(data, 5)
 	] as ModelProps[][];
 </script>
 

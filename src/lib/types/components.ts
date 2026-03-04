@@ -52,7 +52,7 @@ export type ModelSquareComponentProps = ComponentProps & {
 	};
 };
 
-export type LetterAnimatedComponentProps = ComponentProps & {
+export type AnimatedTextComponentProps = ComponentProps & {
 	text: string;
 	show: boolean;
 	step: number;

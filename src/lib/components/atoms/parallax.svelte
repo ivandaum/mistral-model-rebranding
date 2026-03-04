@@ -12,11 +12,21 @@
 
 	const { min, max, ...props }: ParallaxComponentProps = $props();
 
+	// Raf dynamic key if multiple parallax run at the same time
 	const RAF_KEY = 'parallax-' + uuid();
 
 	let element: HTMLElement | undefined = $state();
 
-	let y = $state();
+	// y will return a value between max & min, based on t (0 -> 1)
+	// example :
+	// with min = 0, max = 10, t = 0.5
+	// y -> 5
+	//
+	// with min = -10, max = 10, t = 0.5
+	// y -> 0
+	//
+	// this value is calculated with a lerp
+	let y: number = $state(0);
 
 	const animate = (t: number) => {
 		if (!element) return;
@@ -24,9 +34,11 @@
 		y = lerp(min, max, t);
 	};
 
+	// when element is visible in the viewport
 	const onShow = () => {
 		if (!element) return;
 
+		// get the scroll progression based on container
 		const { init, onScroll } = sectionScrollProgress(element, window.innerHeight * 0.5);
 
 		init();
@@ -34,6 +46,8 @@
 		raf.add(RAF_KEY, () => onScroll?.((t) => animate(t)));
 	};
 
+	// if element isn't visible
+	// or if the component is destroyed
 	const onHide = () => {
 		const raf = Raf.getInstance();
 		raf.remove(RAF_KEY);
@@ -46,6 +60,7 @@
 
 		return () => {
 			domObserver.destroy();
+			onHide();
 		};
 	});
 </script>
