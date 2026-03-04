@@ -7,7 +7,11 @@
 	let { children } = $props();
 </script>
 
-<svelte:head><link rel="icon" href={favicon} /></svelte:head>
+<svelte:head>
+	<title>Mistral models rebranding</title>
+	<meta name="description" content="Mistral models rebranding" />
+	<link rel="icon" href={favicon} />
+</svelte:head>
 <div
 	class="relative flex h-auto min-h-dvh w-full flex-col bg-mistral-bg-yellow font-light tracking-normal text-mistral-text-1"
 >
