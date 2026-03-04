@@ -22,6 +22,7 @@
 				[i !== 0 && 'border-l']
 			)}
 			onclick={() => onSelectHandler(i)}
+			aria-label={text}
 		>
 			{text}
 

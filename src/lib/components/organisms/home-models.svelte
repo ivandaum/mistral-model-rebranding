@@ -10,6 +10,7 @@
 
 	import Subtitle from '$lib/components/modules/subtitle.svelte';
 	import CardModel from '$lib/components/modules/card-model.svelte';
+	import { round } from '$lib/utils/math';
 
 	let contentWidth = 0;
 	let sliderWidth = 0;
@@ -74,7 +75,7 @@
 </script>
 
 <section class="flex w-full flex-col" id="models">
-	<div class="md:h-[300dvh]" bind:this={scrollable} style={`--x:${x}px`}>
+	<div class="md:h-[300dvh]" bind:this={scrollable} style={`--x:${round(x)}px`}>
 		<div
 			class="sticky top-0 left-0 m-auto flex flex-col overflow-x-hidden pt-8 pb-16"
 			bind:this={sticky}

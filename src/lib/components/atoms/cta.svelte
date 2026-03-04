@@ -48,6 +48,7 @@
 	)}
 	{href}
 	bind:this={element}
+	aria-label={text}
 >
 	{#if text}
 		<p class="relative z-10 py-2 pl-4 text-nowrap">
