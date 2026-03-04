@@ -44,7 +44,7 @@
 						'flex flex-col justify-between border border-mistral-yellow-2 p-6 md:aspect-4/3 ',
 						'transition-transform delay-(--delay) duration-500 hover:border-mistral-yellow-2 hover:bg-mistral-yellow-2 hover:[&_p_img]:animate-blink-twice',
 						{
-							'translate-y-8': !show
+							'translate-x-8': !show
 						}
 					)}
 					href={model.link}

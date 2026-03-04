@@ -44,7 +44,7 @@
 	<Tabs value={index} items={['Custom pre-training', 'Fine-tuning']} onselect={onSelectTab} />
 	<BackgroundGrid class="flex h-auto w-full items-center justify-center">
 		<div
-			class="relative flex w-full max-w-7xl items-center justify-center py-[70px] md:h-[640px]"
+			class="relative flex w-full max-w-7xl items-center justify-center py-[70px] md:h-[640px] md:overflow-hidden"
 			bind:this={element}
 		>
 			{#each CUSTOM_MODELS as item, i}

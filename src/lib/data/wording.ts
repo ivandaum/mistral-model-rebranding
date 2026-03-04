@@ -234,3 +234,32 @@ export const DEPLOY_OUR_MODELS = [
 		link: 'https://docs.mistral.ai/deployment/cloud'
 	}
 ];
+
+export const MODEL_LICENCES = [
+	['Access to weights', '{checkmark}', '{checkmark}', '{checkmark}'],
+	[
+		'Deployment for research purposes and individual usage',
+		'{checkmark}',
+		'{checkmark}',
+		'{checkmark}'
+	],
+	[
+		'Creation of derivatives (e.g. fine-tuning) for research purposes and individual usage',
+		'{checkmark}',
+		'{checkmark}The same license applies to derivatives',
+		'{checkmark}'
+	],
+	[
+		'Deployment for commercial purposes (internal & external use cases)',
+		'{checkmark}',
+		'{cross}Requires Mistral commercial license',
+		'{checkmark}'
+	],
+	[
+		'Creation and usage of derivatives (e.g. fine-tuning) for commercial use cases',
+		'{checkmark}',
+		'{cross}Requires Mistral commercial license',
+		'{checkmark}'
+	],
+	['Custom terms & support (self-deployment)', '{checkmark}', '{cross}', '{checkmark}']
+];
