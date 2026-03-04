@@ -42,6 +42,8 @@
 	/* keyframes */
 	--animate-blink-twice: animate-blink-twice 350ms linear;
 	--animate-cta-letter: animate-cta-letter 150ms linear;
+	--animate-tab-content-in: animate-tab-content-in 400ms ease-in-out;
+	--animate-tab-content-out: animate-tab-content-out 400ms ease-in-out;
 }
 
 @keyframes animate-cta-letter {
@@ -53,6 +55,38 @@
 	51%,
 	100% {
 		opacity: 1;
+	}
+}
+
+@keyframes animate-tab-content-in {
+	0% {
+		transform: translateX(-5%);
+		opacity: 0;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+}
+
+@keyframes animate-tab-content-out {
+	0% {
+		transform: translateX(0%);
+		opacity: 1;
+	}
+
+	50% {
+		opacity: 0;
+	}
+
+	100% {
+		transform: translateX(5%);
+		opacity: 0;
 	}
 }
 

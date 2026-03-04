@@ -18,8 +18,11 @@
 		<button
 			class={cn(
 				'flex flex-1 cursor-default items-center justify-between gap-10 border-black px-4 py-2 text-sm/normal whitespace-nowrap',
-				[i === index && 'bg-black text-white'],
-				[i !== 0 && 'border-l']
+				{
+					'bg-black text-white': i === index,
+					'hover:bg-mistral-yellow-3': i !== index,
+					'border-l': i !== 0
+				}
 			)}
 			onclick={() => onSelectHandler(i)}
 			aria-label={text}
