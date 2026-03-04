@@ -15,8 +15,8 @@ The goal is to challenge the current design. While using the same codes (color, 
 
 Motion references :
 
-- (futuristic city 1)[https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2989da120242593.60adeb7e781fc.gif]
-- (Cyberpunk city 2)[https://id.pinterest.com/pin/35747390786995745/]
+- [futuristic city 1](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2989da120242593.60adeb7e781fc.gif)
+- [Cyberpunk city 2](https://id.pinterest.com/pin/35747390786995745/)
 
 ## Improvements
 
