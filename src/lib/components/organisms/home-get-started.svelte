@@ -1,6 +1,4 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
-
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
 	import BackgroundGrid from '$lib/components/atoms/background-grid.svelte';
@@ -24,13 +22,13 @@
 				[3, 'translate-x-[37vw] -translate-y-[10vh]'],
 				[4, '-translate-x-[40vw]'],
 				[5, '-translate-x-[30vw] translate-y-[17vh]'],
-				[6, 'translate-x-[13vw] translate-y-[22vh]']
+				[6, 'translate-x-[13vw] translate-y-[10vh]']
 			]
 		}
 	];
 </script>
 
-<section class="relative my-30 flex w-full items-center justify-center overflow-hidden">
+<section class="relative my-30 mt-15 flex w-full items-center justify-center overflow-hidden">
 	<div class="relative z-5 flex w-full flex-col justify-center px-4">
 		<Title
 			headline="Ready to get started?"
