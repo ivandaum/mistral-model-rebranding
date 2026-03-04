@@ -40,7 +40,7 @@
 		'md:aspect-12/16 md:max-h-(--model-card-max-height) md:w-[40%] md:max-w-[500px]',
 		'transition-all duration-500 will-change-transform',
 		{
-			'translate-x-[20%]': !show
+			'md:translate-x-[20%]': !show
 		},
 		props.class
 	)}

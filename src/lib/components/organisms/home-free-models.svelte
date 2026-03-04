@@ -59,7 +59,7 @@
 						</span>
 						<p>{model.title}</p>
 					</h3>
-					<p class="flex items-center gap-8 pt-4 md:pt-0">
+					<p class="flex items-center gap-2 pt-4 md:gap-8 md:pt-0">
 						{model.description}
 						<img class="size-4" src={arrow} alt="" />
 					</p>

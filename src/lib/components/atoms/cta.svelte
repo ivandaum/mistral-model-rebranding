@@ -11,19 +11,19 @@
 
 	let { href, text, ...props }: CtaComponentProps = $props();
 
-	let elementRef: HTMLAnchorElement | undefined = $state();
+	let element: HTMLAnchorElement | undefined = $state();
 	let showElement = $state(false);
 
 	// step between each letters animation
 	const STEP = 15;
 
 	onMount(() => {
-		if (!elementRef) {
+		if (!element) {
 			return;
 		}
 
 		const domObserver = observer({
-			element: elementRef,
+			element,
 			onShow: () => {
 				showElement = true;
 			}
@@ -47,7 +47,7 @@
 		props.class
 	)}
 	{href}
-	bind:this={elementRef}
+	bind:this={element}
 >
 	{#if text}
 		<p class="relative z-10 py-2 pl-4 text-nowrap">

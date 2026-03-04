@@ -10,16 +10,16 @@
 
 	const { headline, text, heading, ...props }: TitleComponentProps = $props();
 
-	let elementRef: HTMLDivElement | undefined = $state();
+	let element: HTMLDivElement | undefined = $state();
 	let show = $state(false);
 
 	onMount(() => {
-		if (!elementRef) {
+		if (!element) {
 			return;
 		}
 
 		const domObserver = observer({
-			element: elementRef,
+			element,
 			rootMargin: '0px 0px -350px 0px',
 			onShow: () => {
 				show = true;
@@ -34,7 +34,7 @@
 
 <div
 	class={cn('flex flex-col items-center justify-center pt-50 pb-10 text-center', props.class)}
-	bind:this={elementRef}
+	bind:this={element}
 >
 	<svelte:element
 		this={heading}
