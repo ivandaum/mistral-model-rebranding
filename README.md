@@ -62,6 +62,10 @@ Section: "Ready to get started"
 - Added models icons to make this section feels like a "checkpoint"
 - Added a parallax effect on scroll to keep the dynamic feeling of each section being alive
 
+Section: "Model licenses explained"
+
+- Added a fade-in with a light delay for each row of the array
+
 ## Tech details
 
 ### Animation
