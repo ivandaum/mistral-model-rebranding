@@ -11,6 +11,7 @@
 
 <style lang="scss">
 	.bg-grid {
+		// this comes from the Mistral live site
 		--grid-size-x: 50px;
 		--grid-size-y: 50px;
 		--grid-thickness: 1px;

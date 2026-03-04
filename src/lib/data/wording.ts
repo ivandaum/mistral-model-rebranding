@@ -37,7 +37,7 @@ export const MODELS_EXAMPLES = [
 	},
 	{
 		title: 'Nemo',
-		link: 'https://mistral.ai/models#free',
+		link: '#free',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc33ba3c9-04a1-41af-95e1-fe4878c851ae&w=96&q=75'
 	}

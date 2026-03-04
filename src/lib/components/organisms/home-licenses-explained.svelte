@@ -33,7 +33,7 @@
 
 	<!-- this comes form Mistral page directly -->
 	<div
-		class={cn('overflow-x-auto [&_tr]:transition-all [&_tr]:duration-300', {
+		class={cn('overflow-x-auto', {
 			'[&_tr]:opacity-0': !show
 		})}
 		bind:this={element}
@@ -83,7 +83,10 @@
 			</thead>
 			<tbody>
 				{#each MODEL_LICENCES as row, i}
-					<tr class="border-b border-black delay-(--delay)" style={`--delay:${i * 50}ms`}>
+					<tr
+						class="border-b border-black transition-opacity delay-(--delay) duration-500"
+						style={`--delay:${i * 50}ms`}
+					>
 						{#each row as content}
 							<td
 								class="text-foreground bg-mistral-beige-deep px-4 pt-5 pb-[63px] text-left text-sm/[14.7px] font-normal"

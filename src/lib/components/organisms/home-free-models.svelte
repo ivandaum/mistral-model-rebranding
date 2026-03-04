@@ -19,7 +19,7 @@
 		const obs = observer({
 			element,
 			onShow: () => (show = true),
-			rootMargin: '0px 0px -350px 0px'
+			rootMargin: '0px 0px -150px 0px'
 		});
 
 		return () => {
@@ -28,7 +28,7 @@
 	});
 </script>
 
-<section class={'flex w-full flex-col'} bind:this={element}>
+<section class={'flex w-full flex-col'} bind:this={element} id="free">
 	<div class="m-auto flex max-w-7xl flex-col items-center overflow-hidden px-4">
 		<Subtitle
 			headline="Free open-weight models for research."
