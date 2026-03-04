@@ -74,7 +74,7 @@
 					<img
 						alt="chart"
 						class={cn('w-full transition-all delay-200 duration-400 md:w-1/2', {
-							'-translate-x-8': i !== index
+							'-translate-x-6': i !== index
 						})}
 						src={item.image}
 					/>

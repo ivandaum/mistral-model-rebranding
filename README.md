@@ -1,5 +1,9 @@
 # Mistral models page redesign
 
+## Live version
+
+The live version of this project is available at https://mistral-model-rebranding.netlify.app/
+
 ## Goal
 
 The goal is to challenge the current design. While using the same codes (color, content, placements), I try to make the page more "alive" and dynamic, with the feeling the content is more reactive to the user. Each animation should be playfull and fun, while still leaving the content readable and accessible right away. The experience should also be consistent on mobile.
@@ -9,7 +13,7 @@ The goal is to challenge the current design. While using the same codes (color, 
 - Chatbot animation (text abruptly appearing and disappearing)
 - 8 bit & Robot references (motion with low FPS, pixelated animation, blinking cursor, scrolling information)
 - Mistral branding (color scheme, playing on shapes of yellow -> orange)
-- Mistral square & rectangular shape as its identity : re-enforce the shape to uniformize interactive elements (button, cards)
+- Mistral square & rectangular shape as its identity : consolidate the shape to uniformize interactive elements (button, cards)
 
 Motion references :
 
@@ -47,18 +51,28 @@ Section: "Free open-weight models"
 - Added the image next to the title to give more personnality to each model
 - Simplified the card to fit "Tailored for you" spirit
 
+Section: "Custom models for your own needs"
+
+- Add fade-in / fade-out between slides
+- Prevent the dom to "jump" when switching between tabs
+- Added animation on tab to better reflect user interactivity
+
 Section: "Ready to get started"
 
 - Added models icons to make this section feels like a "checkpoint"
 - Added a parallax effect on scroll to keep the dynamic feeling of each section being alive
 
-## Live version
-
-The live version of this project is available at https://mistral-model-rebranding.netlify.app/
-
 ## Tech details
 
-### sv
+### Animation
+
+The animations are made with 3 concepts :
+
+- Fade-in animations : triggered only when the element enters the viewport. An IntersectionObserver is monitoring its visibility and update a Svelte `$state()` to trigger or not the animations. See `components/modules/card-model.svelte`for a practical example. The animation are played only once to avoid overwhelming the user.
+- General animations and interactivity : most of the animations (keyframes, transition, transform) are made with pure CSS with tailwind class systems. The different states are triggered by HTML states (hover, ...) and the DOM is updated by adding or removing classes with Svelte. See `components/atoms/cta.svelte` for a practical example.
+- Complex animations (parallax, slider) : made with pure Javascript. All calculations are made in a unique `requestAnimationFrame` loop (managed by `utils/raf.ts` manager), and are added/removed when the component enters or leaves the viewport to keep good performances. Then, rather than updating the component style/css, the animation set a html variable (--x, --y) that can be used in the component and its children thanks to tailwind syntax. See `components/organismes/home-models.svelte` for a practical example.
+
+### Svelte
 
 Everything you need to build a Svelte project, powered by [`sv`](https://github.com/sveltejs/cli).
 

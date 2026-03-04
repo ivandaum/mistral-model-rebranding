@@ -60,7 +60,7 @@
 
 @keyframes animate-tab-content-in {
 	0% {
-		transform: translateX(-5%);
+		transform: translateX(-3%);
 		opacity: 0;
 	}
 
@@ -85,7 +85,7 @@
 	}
 
 	100% {
-		transform: translateX(5%);
+		transform: translateX(3%);
 		opacity: 0;
 	}
 }

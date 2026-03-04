@@ -26,6 +26,7 @@
 	let x: number = $state(0);
 	let easedX = 0;
 
+	// in requestAnimation, control the `t` value and calculate the smooth new value
 	const animate = (t: number) => {
 		if (!scrollable) return;
 
@@ -36,6 +37,7 @@
 		x += (easedX - x) * 0.1;
 	};
 
+	// get the right scrollable area height and init animation
 	const onShow = () => {
 		if (!scrollable || !slider) return;
 
