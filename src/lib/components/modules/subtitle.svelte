@@ -8,7 +8,7 @@
 
 	import LetterAnimated from '$lib/components/atoms/letter-animated.svelte';
 
-	const { headline, text, heading, ...props }: TitleComponentProps = $props();
+	const { headline, text, heading = 'h2', ...props }: TitleComponentProps = $props();
 
 	let elementRef: HTMLDivElement | undefined = $state();
 
@@ -33,7 +33,8 @@
 	});
 </script>
 
-<div
+<svelte:element
+	this={heading}
 	class={cn('flex w-full flex-col items-start justify-start', props.class)}
 	bind:this={elementRef}
 >
@@ -55,4 +56,4 @@
 		</p>
 	{/if}
 	{@render props.children?.()}
-</div>
+</svelte:element>
