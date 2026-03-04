@@ -35,7 +35,7 @@
 	--color-mistral-text-brown: #6e370f;
 
 	/* heights */
-	--model-card-max-height: calc(90dvh - 230px);
+	--model-card-max-height: calc(85dvh - 230px);
 
 	--delay: 0ms;
 

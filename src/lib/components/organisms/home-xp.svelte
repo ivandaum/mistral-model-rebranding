@@ -70,13 +70,15 @@
 		};
 	});
 
-	const data = [
-		[...MODELS_EXAMPLES],
-		offsetArray([...MODELS_EXAMPLES], 2),
-		offsetArray([...MODELS_EXAMPLES], 4),
-		offsetArray([...MODELS_EXAMPLES], 1),
-		offsetArray([...MODELS_EXAMPLES], 3),
-		offsetArray([...MODELS_EXAMPLES], 5)
+	const data = [...MODELS_EXAMPLES, ...MODELS_EXAMPLES];
+
+	const rows = [
+		data,
+		offsetArray(data, 2),
+		offsetArray(data, 4),
+		offsetArray(data, 1),
+		offsetArray(data, 3),
+		offsetArray(data, 5)
 	] as ModelProps[][];
 </script>
 
@@ -96,11 +98,11 @@
 			'absolute flex h-full w-full -translate-x-(--x) -translate-y-(--y) flex-wrap items-center justify-center'
 		]}
 	>
-		{#each data as models, j}
+		{#each rows as models, j}
 			<div class={['flex w-full items-center justify-center']}>
 				{#each models as model, i}
 					<div
-						style={`--delay: ${randomDelay(i * j * 50, 2000, 1000, 1)}ms;transition-delay: var(--delay);`}
+						style={`--delay: ${randomDelay(i * j * 20, 2000, 500, 1)}ms;transition-delay: var(--delay);`}
 						class={cn('border border-mistral-yellow-2 transition-all duration-500', {
 							'translate-y-6 opacity-0': !show
 						})}

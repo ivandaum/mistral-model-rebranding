@@ -12,7 +12,7 @@
 			classNames: 'z-1',
 			range: [-2, 2],
 			images: <[number, string][]>[
-				[0, '-translate-x-[35vw] -translate-y-[15vh]'],
+				[0, '-translate-x-[27vw] -translate-y-[10vh]'],
 				[1, 'translate-x-[35vw] translate-y-[15vh]'],
 				[2, '-translate-x-[15vw] translate-y-[15vh]']
 			]

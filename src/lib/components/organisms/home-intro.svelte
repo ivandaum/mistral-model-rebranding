@@ -20,7 +20,7 @@
 		>
 			<Cta
 				href="https://mistral.ai/contact"
-				class="bg-mistral-bg-yellow delay-1000"
+				class="bg-mistral-bg-yellow delay-500"
 				text="Contact sales"
 			/>
 		</Title>

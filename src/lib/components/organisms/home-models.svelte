@@ -14,8 +14,9 @@
 	let contentWidth = 0;
 	let sliderWidth = 0;
 
-	let scrollableEl: HTMLDivElement | undefined = $state();
-	let stickyEl: HTMLDivElement | undefined = $state();
+	let scrollable: HTMLDivElement | undefined = $state();
+	let sticky: HTMLDivElement | undefined = $state();
+	let slider: HTMLDivElement | undefined = $state();
 	let sliderContainer: HTMLDivElement | undefined = $state();
 
 	const RAF_KEY = 'sticky-model';
@@ -25,21 +26,26 @@
 	let easedX = 0;
 
 	const animate = (t: number) => {
-		if (!scrollableEl) return;
+		if (!scrollable) return;
 
 		// eased X for smooth translate
-		easedX = Math.min(1, Math.max(0, t));
-		easedX = easedX * contentWidth;
+		const limited = Math.min(1, Math.max(0, t));
+
+		easedX = limited * contentWidth;
 		x += (easedX - x) * 0.1;
 	};
 
 	const onShow = () => {
-		if (!scrollableEl || !stickyEl) return;
+		if (!scrollable || !slider) return;
 
-		const { init, onScroll } = sectionScrollProgress(scrollableEl, 0, window.innerHeight);
+		const { init, onScroll } = sectionScrollProgress(
+			scrollable,
+			0,
+			sticky?.offsetHeight || window.innerHeight
+		);
 
 		sliderWidth = sliderContainer?.getBoundingClientRect().width || 0;
-		contentWidth = stickyEl.getBoundingClientRect().width - sliderWidth;
+		contentWidth = slider.getBoundingClientRect().width - sliderWidth;
 
 		init();
 		const raf = Raf.getInstance();
@@ -52,10 +58,10 @@
 	};
 
 	onMount(() => {
-		if (!scrollableEl || !stickyEl || window.innerWidth < 1000) return;
+		if (!scrollable || !slider || window.innerWidth < 1000) return;
 
 		const domObserver = observer({
-			element: scrollableEl,
+			element: scrollable,
 			onShow,
 			onHide,
 			rootMargin: '0px 0px 0px 0px'
@@ -68,8 +74,11 @@
 </script>
 
 <section class="flex w-full flex-col" id="models">
-	<div class="md:h-[300dvh]" bind:this={scrollableEl} style={`--x:${x}px`}>
-		<div class="sticky top-0 left-0 m-auto flex flex-col overflow-x-hidden py-8 pb-16">
+	<div class="md:h-[300dvh]" bind:this={scrollable} style={`--x:${x}px`}>
+		<div
+			class="sticky top-0 left-0 m-auto flex flex-col overflow-x-hidden pt-8 pb-16"
+			bind:this={sticky}
+		>
 			<Subtitle
 				headline="Tailored <img class='inline-block size-8' src='https://cms.mistral.ai/assets/5708523c-f221-47bb-bb62-d052ee70bbc6.svg?width=32&height=22' /> for You. <br> Our premier models are designed to be yours to tune, customize, distill, and deploy. "
 				text="Available for commercial use."
@@ -82,7 +91,7 @@
 						'flex snap-x snap-mandatory gap-2 overflow-x-scroll px-4 py-0 will-change-transform md:snap-none md:overflow-visible',
 						'h-max w-full -translate-x-(--x) md:w-max'
 					]}
-					bind:this={stickyEl}
+					bind:this={slider}
 				>
 					{#each COMMERCIAL_MODELS as model, i}
 						<CardModel {model} class={['bg-mistral-yellow-' + (i + 1)]} />
