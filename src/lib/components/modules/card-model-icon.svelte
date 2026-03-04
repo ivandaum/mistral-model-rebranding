@@ -1,8 +1,8 @@
 <script lang="ts">
-	import type { ModelSquareComponentProps } from '$lib/types/components';
+	import type { CardModelIconComponentProps } from '$lib/types/components';
 	import { cn } from '$lib/utils/cn';
 
-	const { model }: ModelSquareComponentProps = $props();
+	const { model }: CardModelIconComponentProps = $props();
 
 	// when clicking on a link which is an anchor inside the page
 	// we stop the navigation and we smooth scroll to the element

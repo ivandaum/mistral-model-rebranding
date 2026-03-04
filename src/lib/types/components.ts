@@ -44,11 +44,21 @@ export type CardModelComponentProps = ComponentProps & {
 	};
 };
 
-export type ModelSquareComponentProps = ComponentProps & {
+export type CardModelIconComponentProps = ComponentProps & {
 	model: {
 		title: string;
 		link: string;
 		image: string;
+	};
+};
+
+export type CardModelSmallComponentProps = ComponentProps & {
+	model: {
+		title: string;
+		description: string;
+		link: string;
+		image: string;
+		imageSize?: string;
 	};
 };
 

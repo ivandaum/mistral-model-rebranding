@@ -9,6 +9,7 @@
 
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Subtitle from '$lib/components/modules/subtitle.svelte';
+	import CardModelSmall from '../modules/card-model-small.svelte';
 
 	let element: HTMLElement | undefined = $state();
 	let show = $state(false);
@@ -38,33 +39,13 @@
 		/>
 		<div class="grid-wrap mb-4 grid w-full grid-cols-1 gap-4 md:grid-cols-4">
 			{#each FREE_MODELS as model, i}
-				<a
-					// custom delay for fade-in
+				<CardModelSmall
+					{model}
 					style={`--delay: ${i * 100}ms`}
-					class={cn(
-						'flex flex-col justify-between border border-mistral-yellow-2 p-6 md:aspect-4/3 ',
-						'transition-transform delay-(--delay) duration-500 hover:border-mistral-yellow-2 hover:bg-mistral-yellow-2 hover:[&_p_img]:animate-blink-twice',
-						{
-							'translate-x-8': !show
-						}
-					)}
-					href={model.link}
-				>
-					<h3
-						class={cn('flex gap-2 text-[24px] delay-(--delay) duration-500', {
-							'translate-x-4 opacity-0': !show
-						})}
-					>
-						<span class={cn('flex size-10 items-center justify-center')}>
-							<img src={model.image} alt="" class={cn(model.imageSize)} />
-						</span>
-						<p>{model.title}</p>
-					</h3>
-					<p class="flex items-center gap-2 pt-4 md:gap-8 md:pt-0">
-						{model.description}
-						<img class="size-4" src={arrow} alt="" />
-					</p>
-				</a>
+					class={cn({
+						'translate-x-8': !show
+					})}
+				/>
 			{/each}
 		</div>
 
