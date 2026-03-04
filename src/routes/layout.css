@@ -41,7 +41,7 @@
 
 	/* keyframes */
 	--animate-blink-twice: animate-blink-twice 350ms linear;
-	--animate-cta-letter: animate-cta-letter 350ms linear;
+	--animate-cta-letter: animate-cta-letter 150ms linear;
 }
 
 @keyframes animate-cta-letter {

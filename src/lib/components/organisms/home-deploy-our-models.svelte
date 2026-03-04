@@ -7,6 +7,7 @@
 
 <section class="flex w-full max-w-7xl flex-col justify-center px-4">
 	<Subtitle
+		heading="h3"
 		headline="Deploy our models <img class='inline-block size-10 -translate-y-[2px]' src='https://cms.mistral.ai/assets/5ee3cbfa-ce33-44d5-a77f-16bf1b1820ba.svg?width=null&height=null' /> anywhere with flexible infrastructure options spanning cloud providers, edge, VPC and on-premises environments."
 	/>
 

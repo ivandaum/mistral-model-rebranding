@@ -34,7 +34,7 @@
 			headline="Free open-weight models for research."
 			text="Free to use under the Apache 2.0 license."
 			class="w-full"
-			heading="h2"
+			heading="h3"
 		/>
 		<div class="grid-wrap mb-4 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
 			{#each FREE_MODELS as model, i}

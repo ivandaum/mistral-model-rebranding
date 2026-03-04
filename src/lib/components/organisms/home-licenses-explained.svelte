@@ -5,7 +5,7 @@
 </script>
 
 <section class="flex w-full max-w-7xl flex-col justify-center px-4">
-	<Subtitle headline="Model licenses explained." class="my-15" />
+	<Subtitle heading="h3" headline="Model licenses explained." class="my-15" />
 
 	<!-- this comes form Mistral page directly -->
 	<div class="overflow-x-auto">
@@ -150,10 +150,8 @@
 						><div class="flex w-full items-start gap-10">
 							<div class="max-w-none min-w-[156px] md:max-w-[245px]">
 								<p>
-									<span style="white-space: pre-wrap;"
-										>Creation of derivatives (e.g. fine-tuning) for research purposes and individual
-										usage</span
-									>
+									Creation of derivatives (e.g. fine-tuning) for research purposes and individual
+									usage
 								</p>
 							</div>
 						</div></td

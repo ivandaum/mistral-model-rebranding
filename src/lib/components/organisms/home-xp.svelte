@@ -10,7 +10,7 @@
 	import { offsetArray } from '$lib/utils/array';
 
 	import { MODELS_EXAMPLES } from '$lib/data/wording';
-	import ModelSquare from '$lib/components/atoms/model-square.svelte';
+	import ModelSquare from '$lib/components/modules/model-square.svelte';
 
 	const RAF_KEY = 'home_xp_translate';
 
