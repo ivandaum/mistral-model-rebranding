@@ -2,8 +2,8 @@
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
 	import BackgroundGrid from '$lib/components/atoms/background-grid.svelte';
-	import HomeXp from './home-xp.svelte';
-	import Parallax from '../atoms/parallax.svelte';
+	import HomeXp from '$lib/components/organisms/home-xp.svelte';
+	import Parallax from '$lib/components/atoms/parallax.svelte';
 </script>
 
 <section class="relative h-auto w-full">

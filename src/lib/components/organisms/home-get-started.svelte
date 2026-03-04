@@ -2,7 +2,7 @@
 	import Cta from '$lib/components/atoms/cta.svelte';
 	import Title from '$lib/components/modules/title.svelte';
 	import BackgroundGrid from '$lib/components/atoms/background-grid.svelte';
-	import Parallax from '../atoms/parallax.svelte';
+	import Parallax from '$lib/components/atoms/parallax.svelte';
 
 	let containerEl: HTMLElement | undefined = $state();
 </script>
