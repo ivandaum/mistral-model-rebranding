@@ -30,6 +30,11 @@ export type TabsComponentProps = ComponentProps & {
 	onselect?: (index: number) => void;
 };
 
+export type ParallaxComponentProps = ComponentProps & {
+	min: number;
+	max: number;
+};
+
 export type CardModelComponentProps = ComponentProps & {
 	model: {
 		title: string;

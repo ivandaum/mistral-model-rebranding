@@ -35,13 +35,13 @@
 	const onShow = () => {
 		if (!stickyContainerEl || !stickyEl) return;
 
-		const { init, getScroll } = sectionScrollProgress(stickyContainerEl, 0, window.innerHeight);
+		const { init, onScroll } = sectionScrollProgress(stickyContainerEl, 0, window.innerHeight);
 
 		contentWidth = stickyEl.getBoundingClientRect().width - MAX_WIDTH;
 
 		init();
 		const raf = Raf.getInstance();
-		raf.add(RAF_KEY, () => getScroll?.((t) => animate(t)));
+		raf.add(RAF_KEY, () => onScroll?.((t) => animate(t)));
 	};
 
 	const onHide = () => {
