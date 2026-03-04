@@ -18,7 +18,7 @@
 	{#each items as text, i}
 		<button
 			class={cn(
-				'flex flex-1 cursor-default items-center justify-between gap-10 border-black px-4 py-2 text-sm/normal whitespace-nowrap',
+				'flex flex-1 cursor-default items-center justify-between gap-2 border-black px-4 py-2 text-sm/normal whitespace-nowrap md:gap-10',
 				{
 					'bg-black text-white': i === index,
 					'hover:bg-mistral-yellow-3': i !== index,
@@ -28,7 +28,7 @@
 			onclick={() => onSelectHandler(i)}
 			aria-label={text}
 		>
-			{text}
+			<span>{text}</span>
 
 			{#if i === index}
 				<img src={checkmark} alt="checkmark" class="animate-blink-twice" />

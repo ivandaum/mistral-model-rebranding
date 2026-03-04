@@ -11,19 +11,19 @@
 			classNames: 'z-1',
 			range: [-2, 2],
 			images: <[number, string][]>[
-				[0, '-translate-x-[27vw] -translate-y-[10vh]'],
+				[0, '-translate-x-[27vw] -translate-y-[20vh] md:-translate-y-[10vh] '],
 				[1, 'translate-x-[35vw] translate-y-[15vh]'],
-				[2, '-translate-x-[15vw] translate-y-[15vh]']
+				[2, '-translate-x-[15vw] translate-y-[25vh] md:translate-y-[15vh]']
 			]
 		},
 		{
 			classNames: 'z-2',
 			range: [-5, 5],
 			images: <[number, string][]>[
-				[3, 'translate-x-[37vw] -translate-y-[10vh]'],
+				[3, 'translate-x-[37vw] -translate-y-[20vh] md:-translate-y-[10vh]'],
 				[4, '-translate-x-[40vw]'],
 				[5, '-translate-x-[30vw] translate-y-[17vh]'],
-				[6, 'translate-x-[13vw] translate-y-[10vh]']
+				[6, 'translate-x-[13vw] translate-y-[20vh] md:translate-y-[10vh]']
 			]
 		}
 	];

@@ -36,7 +36,7 @@
 			class="w-full"
 			heading="h3"
 		/>
-		<div class="grid-wrap mb-4 grid w-full grid-cols-2 gap-4 md:grid-cols-4">
+		<div class="grid-wrap mb-4 grid w-full grid-cols-1 gap-4 md:grid-cols-4">
 			{#each FREE_MODELS as model, i}
 				<a
 					// custom delay for fade-in

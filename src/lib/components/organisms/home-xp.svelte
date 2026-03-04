@@ -46,10 +46,14 @@
 
 	// bind events for animation
 	const onShow = () => {
-		window.addEventListener('mousemove', onMouseMove);
-		const raf = Raf.getInstance();
-		raf.add(RAF_KEY, animate);
 		show = true;
+
+		// disable on mobile
+		if (window.innerWidth > 1000) {
+			const raf = Raf.getInstance();
+			raf.add(RAF_KEY, animate);
+			window.addEventListener('mousemove', onMouseMove);
+		}
 	};
 
 	// remove events for animation

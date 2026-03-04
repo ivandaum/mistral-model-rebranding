@@ -37,7 +37,7 @@
 	bind:this={element}
 	class={cn(
 		'relative flex w-[75vw] shrink-0 snap-center flex-col items-start justify-between gap-8 p-8 md:snap-none',
-		'h-[70dvh] md:h-[600px] md:max-h-(--model-card-max-height) md:w-[40%] md:max-w-[500px]',
+		'h-[60dvh] md:h-[600px] md:max-h-(--model-card-max-height) md:w-[40%] md:max-w-[500px]',
 		'transition-all duration-500 will-change-transform',
 		{
 			'md:translate-x-[20%]': !show
@@ -46,15 +46,15 @@
 	)}
 >
 	<div class="w-full md:max-w-[90%]">
-		<h3 class="text-foreground text-[46px] font-normal">{model.title}</h3>
-		<p class="text-foreground mb-8 text-xl/[21.6px] leading-6 font-normal md:text-[20px]/[24px]">
+		<h3 class="text-foreground text-[24px] font-normal md:text-[46px]">{model.title}</h3>
+		<p class="text-foreground text-md/[21.6px] mb-8 leading-6 font-normal md:text-[20px]/[24px]">
 			{model.intro}
 		</p>
 	</div>
 	<div class="flex items-start justify-start gap-4 md:max-w-[90%]">
 		<img src={arrowRight} class="mt-1 size-4 md:mt-0 md:size-6" alt="arrow right" />
 		<span>
-			<p class="font-normal">{model.description}</p>
+			<p class="text-md/[21.6px] font-normal md:text-[20px]/[24px]">{model.description}</p>
 			<Cta class="mt-4" href={model.link} text="Learn more" />
 		</span>
 	</div>
