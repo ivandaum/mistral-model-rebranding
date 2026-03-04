@@ -65,7 +65,7 @@
 	});
 </script>
 
-<section class="flex w-full flex-col">
+<section class="flex w-full flex-col" id="models">
 	<div class="md:h-[300dvh]" bind:this={stickyContainerEl} style={`--x:-${x}px`}>
 		<div class="sticky top-8 left-0 flex flex-col justify-start overflow-x-hidden py-4">
 			<Subtitle

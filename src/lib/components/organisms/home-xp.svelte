@@ -5,13 +5,16 @@
 
 	import { observer } from '$lib/utils/observer';
 	import { normalize, round } from '$lib/utils/math';
-
-	import { MODELS_EXAMPLES } from '$lib/data/wording';
 	import { cn } from '$lib/utils/cn';
 	import { randomDelay } from '$lib/utils/random-delay';
-	import { shuffle } from '$lib/utils/shuffle';
+	import { offsetArray } from '$lib/utils/array';
+
+	import { MODELS_EXAMPLES } from '$lib/data/wording';
+	import ModelSquare from '$lib/components/atoms/model-square.svelte';
 
 	const RAF_KEY = 'home_xp_translate';
+
+	type ModelProps = { title: string; link: string; image: string };
 
 	const position: number[] = [0, 0];
 
@@ -69,12 +72,13 @@
 
 	const data = [
 		[...MODELS_EXAMPLES],
-		[...MODELS_EXAMPLES].reverse(),
-		[...MODELS_EXAMPLES],
-		[...MODELS_EXAMPLES].reverse(),
-		[...MODELS_EXAMPLES],
-		[...MODELS_EXAMPLES].reverse()
-	];
+		offsetArray([...MODELS_EXAMPLES], 2),
+		offsetArray([...MODELS_EXAMPLES], 4),
+		offsetArray([...MODELS_EXAMPLES], 1),
+		offsetArray([...MODELS_EXAMPLES], 3),
+		offsetArray([...MODELS_EXAMPLES], 5)
+	] as ModelProps[][];
+	console.log(data);
 </script>
 
 <div
@@ -97,23 +101,12 @@
 			<div class={['flex w-full items-center justify-center']}>
 				{#each models as model, i}
 					<div
-						style={`--delay: ${randomDelay(i * j * 250, 1500, 1000)}ms;transition-delay: var(--delay);`}
-						class={cn('transition-opacity', {
-							'opacity-0': !show
+						style={`--delay: ${randomDelay(i * j * 50, 2000, 1000, 1)}ms;transition-delay: var(--delay);`}
+						class={cn('border border-mistral-yellow-2 transition-all duration-500', {
+							'translate-y-6 opacity-0': !show
 						})}
 					>
-						<a
-							href={model.link}
-							class={cn([
-								'flex aspect-square min-h-[25dvh] min-w-[15vw] shrink-0 cursor-default flex-col items-center justify-center border border-mistral-yellow-2 p-4',
-								'grayscale-100 transition-opacity duration-500 hover:bg-mistral-yellow-1 hover:opacity-100 hover:grayscale-0'
-							])}
-						>
-							<div class="flex size-24 items-center justify-center">
-								<img class="size-18" src={model.image} alt={model.title} />
-							</div>
-							<p class="text-xl font-medium text-mistral-text-brown">{model.title}</p>
-						</a>
+						<ModelSquare {model} />
 					</div>
 				{/each}
 			</div>

@@ -7,37 +7,37 @@ export const MODELS_EXAMPLES = [
 	},
 	{
 		title: 'Codestral',
-		link: '#',
+		link: '#models',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc80b4470-f614-4081-a7ee-b491e8c505e4&w=128&q=75'
 	},
 	{
 		title: 'Mistral Medium',
-		link: '#',
+		link: 'https://mistral.ai/news/mistral-medium-3',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Ffefb95db-897b-4a48-a9ab-ed0ac4273d65&w=96&q=75'
 	},
 	{
 		title: 'Mistral_Large',
-		link: '#',
+		link: '#models',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2F91468458-df5a-483b-88de-94438e143728&w=96&q=75'
 	},
 	{
 		title: 'Voxtral',
-		link: '#',
+		link: 'https://mistral.ai/news/voxtral',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc29ca011-87ff-45b0-8236-08d629812732&w=96&q=75'
 	},
 	{
 		title: 'Document AI',
-		link: '#',
+		link: 'https://mistral.ai/solutions/document-ai',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fda02ec85-9da0-4d26-b25f-07069eb77dde&w=64&q=75'
 	},
 	{
 		title: 'Nemo',
-		link: '#',
+		link: 'https://mistral.ai/models#free',
 		image:
 			'https://mistral.ai/_next/image?url=https%3A%2F%2Fcms.mistral.ai%2Fassets%2Fc33ba3c9-04a1-41af-95e1-fe4878c851ae&w=96&q=75'
 	}

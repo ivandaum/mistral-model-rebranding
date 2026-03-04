@@ -39,6 +39,14 @@ export type CardModelComponentProps = ComponentProps & {
 	};
 };
 
+export type ModelSquareComponentProps = ComponentProps & {
+	model: {
+		title: string;
+		link: string;
+		image: string;
+	};
+};
+
 export type LetterAnimatedComponentProps = ComponentProps & {
 	text: string;
 	show: boolean;
