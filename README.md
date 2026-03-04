@@ -28,10 +28,11 @@ Misc
 - h1 level paragraph have a "robotic/8bit" fade-in
 - h1 have a parallax effect on scroll
 - h2-h3 level paragraph have a smooth "futuristic" fade-in
+- icon blink when hovered/activated
 
 Button
 
-- Cta have a "chat is answering" / "chat is thinking" effect on hover, while the arrow icon is blinking like a cursor
+- Cta have a "chat is answering" / "chat is thinking" effect on hover, its arrow icon is blinking like a cursor
 - Cta has been transformed to a square shape to be more consistent with the rest of the design
 
 Sliders

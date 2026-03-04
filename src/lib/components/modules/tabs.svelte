@@ -26,7 +26,7 @@
 			{text}
 
 			{#if i === index}
-				<img src={checkmark} alt="checkmark" />
+				<img src={checkmark} alt="checkmark" class="animate-blink-twice" />
 			{/if}
 		</button>
 	{/each}
