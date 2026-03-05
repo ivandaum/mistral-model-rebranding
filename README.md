@@ -24,6 +24,12 @@ Motion references :
 - [futuristic city 1](https://mir-s3-cdn-cf.behance.net/project_modules/max_1200/2989da120242593.60adeb7e781fc.gif)
 - [Cyberpunk city 2](https://id.pinterest.com/pin/35747390786995745/)
 
+## Tech stack
+
+- SvelteKit for the frontend framework: lighter & faster than React, more consistent then Vue
+- Tailwind for the CSS: easy to use and maintain, lot of good built-in utilities
+- No external library for animation: all animations are made with CSS or with custom code to keep good performance and maintainability. Keeping the animations simple also helps to keep project lightweight and performant, without having to include heavy-ish external library.
+
 ## Improvements
 
 Misc
