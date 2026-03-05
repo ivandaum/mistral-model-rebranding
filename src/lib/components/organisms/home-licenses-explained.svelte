@@ -16,6 +16,8 @@
 	onMount(() => {
 		if (!element) return;
 
+		// Watch element visibility to trigger animation if it enter the viewport
+		// rootMargin negative to be able to see the all animation of the rows
 		const obs = observer({
 			element,
 			rootMargin: '0px 0px -250px 0px',

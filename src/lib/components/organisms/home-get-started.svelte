@@ -5,8 +5,8 @@
 	import Parallax from '$lib/components/atoms/parallax.svelte';
 	import { MODELS_EXAMPLES } from '$lib/data/wording';
 
-	// data formating so I can easily update it
-	const sections = [
+	// data formating so I can easily update it and set images positions
+	const parallaxSections = [
 		{
 			classNames: 'z-1',
 			range: [-2, 2],
@@ -42,7 +42,7 @@
 
 	<BackgroundGrid class="h-ful absolute top-0 left-0 z-1 w-full" />
 
-	{#each sections as section}
+	{#each parallaxSections as section}
 		<Parallax
 			min={section.range[0]}
 			max={section.range[1]}

@@ -17,6 +17,7 @@
 	onMount(() => {
 		if (!element) return;
 
+		// Trigger when element enters the viewport
 		const obs = observer({
 			element,
 			onShow: () => (show = true),

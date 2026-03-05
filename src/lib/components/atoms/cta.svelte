@@ -12,9 +12,9 @@
 	let { href, text, ...props }: CtaComponentProps = $props();
 
 	let element: HTMLAnchorElement | undefined = $state();
-	let showElement = $state(false);
+	let show = $state(false);
 
-	// step to animate each letters, to be sure they fade-in after their previous one
+	// step to animate each letters, to be sure they fade-in after their previous sibling
 	const STEP = 15;
 
 	onMount(() => {
@@ -22,10 +22,11 @@
 			return;
 		}
 
+		// Watch element to trigger animation if it enter the viewport
 		const domObserver = observer({
 			element,
 			onShow: () => {
-				showElement = true;
+				show = true;
 			}
 		});
 
@@ -43,7 +44,7 @@
 		// hover states
 		'hover:[&_img]:animate-blink-twice hover:[&_span]:animate-cta-letter hover:[&_span]:text-mistral-orange',
 		{
-			'translate-y-2 opacity-0': !showElement
+			'translate-y-2 opacity-0': !show
 		},
 		props.class
 	)}
@@ -58,7 +59,9 @@
 				class="duration-150"
 				style="animation-delay: var(--delay);"
 				step={STEP}
+				// disable randomness to be sure letters plays after each others
 				rand={1}
+				// overwrite because we don't need fade-in for cta, only hover animations
 				show={true}
 			/>
 		</p>

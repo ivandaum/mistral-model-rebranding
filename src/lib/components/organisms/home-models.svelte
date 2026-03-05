@@ -15,6 +15,7 @@
 	let contentWidth = 0;
 	let sliderWidth = 0;
 
+	// HTML elements references
 	let scrollable: HTMLDivElement | undefined = $state();
 	let sticky: HTMLDivElement | undefined = $state();
 	let slider: HTMLDivElement | undefined = $state();
@@ -23,7 +24,10 @@
 	// the raf unique id
 	const RAF_KEY = 'sticky-model';
 
+	// the current scroll
 	let x: number = $state(0);
+
+	// used to "ease" the current scroll for smooth transition
 	let easedX = 0;
 
 	// this will be fired inside a requestAnimation
@@ -44,11 +48,20 @@
 
 		const { init, onScroll } = sectionScrollProgress(
 			scrollable,
+			// no offset
 			0,
+			// we want the content to stop scrolling when
+			// the bottom of this block is already visible,
+			// not when the top of the window reach the bottom
 			sticky?.offsetHeight || window.innerHeight
 		);
 
+		// remove this value from the total scrollable are so
+		// the content stop scrolling when the right side of the sliderContainer
+		// reach the right side of the window
 		sliderWidth = sliderContainer?.getBoundingClientRect().width || 0;
+
+		// the total side the sliderContainer will scroll
 		contentWidth = slider.getBoundingClientRect().width - sliderWidth;
 
 		init();
@@ -66,6 +79,7 @@
 	onMount(() => {
 		if (!scrollable || !slider || window.innerWidth < 1000) return;
 
+		// Watch element visibility to trigger animation if it enter/leave the viewport
 		const domObserver = observer({
 			element: scrollable,
 			onShow,

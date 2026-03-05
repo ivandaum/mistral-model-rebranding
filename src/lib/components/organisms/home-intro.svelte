@@ -12,7 +12,7 @@
 			text="State of the art models with cutting edge capabilities, from cloud to edge."
 			heading="h1"
 			class={[
-				'relative z-10 translate-y-(--y) px-10 py-20',
+				'relative z-10 px-10 py-20',
 				'bg-radial from-mistral-bg-yellow from-40% to-transparent to-70%'
 			]}
 		>

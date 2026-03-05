@@ -19,6 +19,7 @@
 			return;
 		}
 
+		// When element enters the viewport, trigger the animation
 		const domObserver = observer({
 			element: elementRef,
 			rootMargin: '0px 0px -150px 0px',
@@ -40,9 +41,11 @@
 >
 	<p class="mb-4 text-[30px]/[34.5px] md:max-w-[75%] md:text-5xl/[50px]">
 		<AnimatedText
+			// we select all words, not all letters
 			regex=" "
 			text={headline}
 			step={25}
+			// disable randomness
 			rand={1}
 			{show}
 			class={cn('mr-2 inline-block duration-300', {

@@ -17,6 +17,7 @@
 	onMount(() => {
 		if (!element) return;
 
+		// When element enters or leave the viewport
 		const domObserver = observer({
 			element,
 			onShow: () => {

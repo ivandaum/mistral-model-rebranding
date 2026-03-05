@@ -25,7 +25,7 @@
 	// with min = -10, max = 10, t = 0.5
 	// y -> 0
 	//
-	// this value is calculated with a lerp
+	// this value is calculated with a lerp in the `animate` fonction
 	let y: number = $state(0);
 
 	const animate = (t: number) => {
@@ -53,6 +53,7 @@
 		raf.remove(RAF_KEY);
 	};
 
+	// Trigger or remove when element enters the viewport
 	onMount(() => {
 		if (!element) return;
 

@@ -18,6 +18,8 @@
 			return;
 		}
 
+		// When element enters the viewport and element is visible (rootMargin: -350px)
+		// trigger the animation
 		const domObserver = observer({
 			element,
 			rootMargin: '0px 0px -350px 0px',

@@ -9,7 +9,10 @@
 	import { cn } from '$lib/utils/cn';
 	import { observer } from '$lib/utils/observer';
 
+	// negative slide to trigger the fade-in when element
+	// enters the viewport
 	let index = $state(-1);
+
 	let element: HTMLElement | undefined = $state();
 
 	// when a new tab is selected
@@ -17,6 +20,8 @@
 		index = i;
 	};
 
+	// When element enters the viewport,
+	// select the first slide which will trigger the fade-in
 	onMount(() => {
 		if (!element) return;
 

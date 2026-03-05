@@ -12,6 +12,7 @@
 	import { MODELS_EXAMPLES } from '$lib/data/wording';
 	import CardModelIcon from '$lib/components/modules/card-model-icon.svelte';
 
+	// Raf unique key
 	const RAF_KEY = 'home_xp_translate';
 
 	type ModelProps = { title: string; link: string; image: string };
@@ -63,6 +64,7 @@
 		raf.remove(RAF_KEY);
 	};
 
+	// Watch element visibility to trigger animation if it enter/leave the viewport
 	onMount(() => {
 		if (!element) return;
 

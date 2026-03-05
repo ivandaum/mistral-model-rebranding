@@ -1,7 +1,7 @@
 <script lang="ts">
 	/**
-	 * This component is an helper to help split a text to <span/>, to be able to animate each letters/words.
-	 * Every letters will have a unique "--delay" html variable
+	 * This component is an helper to help split a text to <span></span>, to be able to animate each letters/words.
+	 * Every letters will have a unique "--delay" html variable to animate after their previous sibling
 	 *
 	 * By default, each letter will have a random delay, but this can be controlled by overwritting
 	 * the "rand" seed variable (with rand="1" for example, to avoid the factor to be random)
