@@ -80,7 +80,7 @@ The animations are made with simple concepts :
 - Most of them are fade-in animations only : triggered only when the element enters the viewport.
 - An IntersectionObserver is monitoring its visibility and update a Svelte `$state()` to trigger or not the animations.
 
-_-> See `components/modules/card-model.svelte`for a practical example._
+_-> See [components/modules/card-model.svelte](https://github.com/ivandaum/mistral-model-rebranding/blob/main/src/lib/components/modules/card-model.svelte) for a practical example._
 
 **CSS animations for better performance and maintainability**
 
@@ -88,7 +88,7 @@ _-> See `components/modules/card-model.svelte`for a practical example._
 - The animation on states changes are triggered by HTML states (hover, ...)
 - the DOM is updated by adding or removing classes throught Svelte.
 
-_-> See `components/atoms/cta.svelte` for a practical example._
+_-> See [components/atoms/cta.svelte](https://github.com/ivandaum/mistral-model-rebranding/blob/main/src/lib/components/atoms/cta.svelte) for a practical example._
 
 **One requestAnimationFrame loop for the rest of the calculations**
 
@@ -97,7 +97,7 @@ _-> See `components/atoms/cta.svelte` for a practical example._
 - Animations are added/removed when the component enters or leaves the viewport to keep good performances.
 - Rather than updating the component style/css directly, the animation set a html variable (`--x` or `--y` for example) that can be used in the component and its children thanks to tailwind syntax (with the class `translate-x-(--x)`)
 
-_-> See `components/organismes/home-models.svelte` for a practical example._
+_-> See [components/organismes/home-models.svelte](https://github.com/ivandaum/mistral-model-rebranding/blob/main/src/lib/components/organisms/home-models.svelte) for a practical example._
 
 ## Project install & start
 
