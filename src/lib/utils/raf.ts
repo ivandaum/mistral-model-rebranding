@@ -1,6 +1,7 @@
 // Raf manager :
 // Managing all animation to make sure there's always one requestAnimationFrame running at the same time
 // will allow user to dynamically add/remove animation
+// If you're not familiar with the "Raf Manager" concept : https://dev.to/josephciullo/supercharge-your-web-animations-optimize-requestanimationframe-like-a-pro-22i5
 class Raf {
 	static instance: Raf | null = null;
 
@@ -19,6 +20,7 @@ class Raf {
 		this.update = this.update.bind(this);
 	}
 
+	// get the current instance of initiat a new one
 	static getInstance() {
 		if (!Raf.instance) {
 			Raf.instance = new Raf();
@@ -26,6 +28,7 @@ class Raf {
 		return Raf.instance;
 	}
 
+	// add an animation to the active list
 	add(id: string, callback: (t: number) => void) {
 		if (!this.callbacks.has(id)) {
 			this.callbacks.set(id, callback);
@@ -33,6 +36,7 @@ class Raf {
 		}
 	}
 
+	// remove the given {id} animation from the active one
 	remove(id: string) {
 		this.callbacks.delete(id);
 		if (this.callbacks.size === 0) {
@@ -40,6 +44,7 @@ class Raf {
 		}
 	}
 
+	// check if we need to start the requestAnimationFrame
 	startIfNeeded() {
 		if (!this.isRunning) {
 			this.isRunning = true;
@@ -47,10 +52,12 @@ class Raf {
 		}
 	}
 
+	// Stop the requestAnimationFrame
 	stop() {
 		this.isRunning = false;
 	}
 
+	// the actual requestAnimationFrame running
 	update(timestamp: number) {
 		if (!this.isRunning) return;
 		this.callbacks.forEach((callback) => callback(timestamp));
