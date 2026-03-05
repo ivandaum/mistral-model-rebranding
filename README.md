@@ -12,6 +12,8 @@ While using the same codes (color, content, placements), I try to make the page 
 
 Small design updates have been made to improve readability or to make some elements pop more.
 
+Keep in mind that this has been made in a very short time (3-4 days) with constraints, so there is still a lot of room for improvement and optimization.
+
 ## Inspiration
 
 - Chatbot animation (text abruptly appearing and disappearing)
@@ -26,7 +28,7 @@ Motion references :
 
 ## Tech stack
 
-- SvelteKit for the frontend framework: lighter & faster than React, more consistent then Vue
+- SvelteKit for the frontend framework: lighter & faster than React, more consistent than Vue
 - Tailwind for the CSS: easy to use and maintain, lot of good built-in utilities
 - No external library for animation: all animations are made with CSS or with custom code to keep good performance and maintainability. Keeping the animations simple also helps to keep project lightweight and performant, without having to include heavy-ish external library.
 
@@ -99,7 +101,7 @@ _-> See [components/atoms/cta.svelte](https://github.com/ivandaum/mistral-model-
 **One requestAnimationFrame loop for the rest of the calculations**
 
 - Complex animations (parallax, slider) are made without external library.
-- All calculations are made in a unique `requestAnimationFrame` loop (managed by `utils/raf.ts` manager).
+- All calculations are made in a unique `requestAnimationFrame` loop (managed by [utils/raf.ts](https://github.com/ivandaum/mistral-model-rebranding/blob/main/src/lib/utils/raf.ts) manager).
 - Animations are added/removed when the component enters or leaves the viewport to keep good performances.
 - Rather than updating the component style/css directly, the animation set a html variable (`--x` or `--y` for example) that can be used in the component and its children thanks to tailwind syntax (with the class `translate-x-(--x)`)
 
