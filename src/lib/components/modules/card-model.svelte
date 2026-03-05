@@ -36,7 +36,7 @@
 <div
 	bind:this={element}
 	class={cn(
-		'relative flex shrink-0 snap-center flex-col items-start justify-between gap-8 p-8 md:snap-none',
+		'relative flex shrink-0 snap-center flex-col items-start justify-between p-6 md:snap-none md:p-8',
 		// sizes
 		'w-[75vw] md:h-[600px] md:max-h-(--model-card-max-height) md:w-[50%] md:max-w-[500px]',
 		// transitions
@@ -49,7 +49,7 @@
 >
 	<div class="w-full md:max-w-[90%]">
 		<h3 class="text-foreground text-[24px] font-normal md:text-[46px]">{model.title}</h3>
-		<p class="text-foreground text-md/[21.6px] mb-8 leading-6 font-normal md:text-[20px]/[24px]">
+		<p class="text-foreground text-md/[21.6px] mb-2 leading-6 font-normal md:text-[20px]/[24px]">
 			{model.intro}
 		</p>
 	</div>
