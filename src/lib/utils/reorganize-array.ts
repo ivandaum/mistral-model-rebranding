@@ -4,7 +4,7 @@ type arrType = string | object | number;
 // with offset="1" : [1, 2, 3, 4] -> [4, 1, 2, 3]
 // with offset="3" : [1, 2, 3, 4] -> [2, 3, 4, 1]
 // used to generate a grid of model in HomeIntro
-export const reorganizeArray = (arr: arrType[], offset: number) => {
+export const reorganizeArray = (arr: arrType[], offset: number): arrType[] => {
 	let i = offset;
 	const r = [];
 

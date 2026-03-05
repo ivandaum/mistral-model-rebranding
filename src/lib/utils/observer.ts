@@ -12,7 +12,9 @@ export const observer = ({
 	onHide,
 	threshold = [],
 	rootMargin = '0px 0px 0px 0px'
-}: ObserverProps): { destroy: () => void } => {
+}: ObserverProps): {
+	destroy: () => void;
+} => {
 	const observer = new IntersectionObserver(
 		(entries) => {
 			entries.forEach((entry) => {

@@ -59,7 +59,7 @@
 				maxDelay={1500}
 				rand={1}
 				{show}
-				class={cn('animate-letter mr-1.5 inline-block duration-350', {
+				class={cn('mr-1.5 inline-block delay-(--delay) duration-350', {
 					'translate-y-2 opacity-0': !show
 				})}
 			/>
@@ -67,9 +67,3 @@
 	{/if}
 	{@render props.children?.()}
 </div>
-
-<style lang="scss">
-	.animate-letter {
-		transition-delay: var(--delay);
-	}
-</style>

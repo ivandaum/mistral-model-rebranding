@@ -28,9 +28,9 @@
 
 {#each explodeHtmlString(text, regex) as letter, i}
 	<span
-		style={`--delay: ${randomDelay(i * step, maxDelay, delayOffset, rand)}ms;${props.style}`}
+		style={`--delay: ${randomDelay(i * step, maxDelay, delayOffset, rand)}ms;${props.style ?? ''}`}
 		class={cn(
-			'animate-letter transition-all duration-0',
+			'transition-all delay-(--delay) duration-0',
 			{
 				'opacity-0': !show
 			},
@@ -45,9 +45,3 @@
 		{@html letter}
 	</span>
 {/each}
-
-<style lang="scss">
-	.animate-letter {
-		transition-delay: var(--delay);
-	}
-</style>

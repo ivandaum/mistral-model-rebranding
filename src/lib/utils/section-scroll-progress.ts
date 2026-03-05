@@ -9,7 +9,10 @@ export const sectionScrollProgress = (
 	section: HTMLElement,
 	scrollOffset: number = 0,
 	scrollableAreaOffset: number = 0
-) => {
+): {
+	init: () => void;
+	onScroll: (callback: (t: number) => void) => void;
+} => {
 	if (!section) {
 		return {
 			init: () => null,
