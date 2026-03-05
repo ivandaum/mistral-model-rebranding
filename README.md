@@ -71,15 +71,35 @@ Section: "Model licenses explained"
 
 - Added a fade-in with a light delay for each row of the array
 
-## Tech details
+## Animation
 
-### Animation
+The animations are made with simple concepts :
 
-The animations are made with 3 concepts :
+**Fade-in only, play only once to avoid overwhelming the user**
 
-- Most of them are fade-in animations only : triggered only when the element enters the viewport. An IntersectionObserver is monitoring its visibility and update a Svelte `$state()` to trigger or not the animations. See `components/modules/card-model.svelte`for a practical example. Animations are played only once to avoid overwhelming the user.
-- General animations and interactivity : most of the animations (keyframes, transition, transform) are made with pure CSS with tailwind class systems. The different states are triggered by HTML states (hover, ...) and the DOM is updated by adding or removing classes throught Svelte. See `components/atoms/cta.svelte` for a practical example.
-- Complex animations (parallax, slider) : made with pure Javascript. All calculations are made in a unique `requestAnimationFrame` loop (managed by `utils/raf.ts` manager), and are added/removed when the component enters or leaves the viewport to keep good performances. Then, rather than updating the component style/css, the animation set a html variable (--x, --y for example) that can be used in the component and its children thanks to tailwind syntax. See `components/organismes/home-models.svelte` for a practical example.
+- Most of them are fade-in animations only : triggered only when the element enters the viewport.
+- An IntersectionObserver is monitoring its visibility and update a Svelte `$state()` to trigger or not the animations.
+
+_-> See `components/modules/card-model.svelte`for a practical example._
+
+**CSS animations for better performance and maintainability**
+
+- Most of the animations (keyframes, transition, transform) are made with CSS with tailwind class systems.
+- The animation on states changes are triggered by HTML states (hover, ...)
+- the DOM is updated by adding or removing classes throught Svelte.
+
+_-> See `components/atoms/cta.svelte` for a practical example._
+
+**One requestAnimationFrame loop for the rest of the calculations**
+
+- Complex animations (parallax, slider) are made without external library.
+- All calculations are made in a unique `requestAnimationFrame` loop (managed by `utils/raf.ts` manager).
+- Animations are added/removed when the component enters or leaves the viewport to keep good performances.
+- Rather than updating the component style/css directly, the animation set a html variable (`--x` or `--y` for example) that can be used in the component and its children thanks to tailwind syntax (with the class `translate-x-(--x)`)
+
+_-> See `components/organismes/home-models.svelte` for a practical example._
+
+## Project install & start
 
 ### Svelte
 
