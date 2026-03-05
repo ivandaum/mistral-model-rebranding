@@ -6,7 +6,11 @@ The live version of this project is available at https://mistral-model-rebrandin
 
 ## Goal
 
-The goal is to challenge the current design. While using the same codes (color, content, placements), I try to make the page more "alive" and dynamic, with the feeling the content is more reactive to the user. Each animation should be playfull and fun, while still leaving the content readable and accessible right away. The experience should also be consistent on mobile.
+The goal is to challenge the current design without changing its core.
+
+While using the same codes (color, content, placements), I try to make the page more alive and dynamic to give the feeling the content is more reactive to the user. Each animation should be playfull and fun, while still leaving the content readable and accessible right away. The experience should also be consistent on mobile.
+
+Small design updates have been made to improve readability or to make some elements pop more.
 
 ## Inspiration
 
@@ -37,6 +41,7 @@ Button
 Section: "It starts with frontier science"
 
 - The scrolling slider has been transformed to a grid of models. Each card is now square to keep them at the same level of importance
+- Models icon have been grayscaled to leave the main title readable. When user hover the card, the icon is colored back to indicate it's interactive
 - The grid is moving based on the user cursor to show the diversity of Mistral models.
 - Added a "trail" effect while hovering models to re-enforce a "pixel/8bit" feeling in the site
 
@@ -72,9 +77,9 @@ Section: "Model licenses explained"
 
 The animations are made with 3 concepts :
 
-- Fade-in animations : triggered only when the element enters the viewport. An IntersectionObserver is monitoring its visibility and update a Svelte `$state()` to trigger or not the animations. See `components/modules/card-model.svelte`for a practical example. The animation are played only once to avoid overwhelming the user.
-- General animations and interactivity : most of the animations (keyframes, transition, transform) are made with pure CSS with tailwind class systems. The different states are triggered by HTML states (hover, ...) and the DOM is updated by adding or removing classes with Svelte. See `components/atoms/cta.svelte` for a practical example.
-- Complex animations (parallax, slider) : made with pure Javascript. All calculations are made in a unique `requestAnimationFrame` loop (managed by `utils/raf.ts` manager), and are added/removed when the component enters or leaves the viewport to keep good performances. Then, rather than updating the component style/css, the animation set a html variable (--x, --y) that can be used in the component and its children thanks to tailwind syntax. See `components/organismes/home-models.svelte` for a practical example.
+- Most of them are fade-in animations only : triggered only when the element enters the viewport. An IntersectionObserver is monitoring its visibility and update a Svelte `$state()` to trigger or not the animations. See `components/modules/card-model.svelte`for a practical example. Animations are played only once to avoid overwhelming the user.
+- General animations and interactivity : most of the animations (keyframes, transition, transform) are made with pure CSS with tailwind class systems. The different states are triggered by HTML states (hover, ...) and the DOM is updated by adding or removing classes throught Svelte. See `components/atoms/cta.svelte` for a practical example.
+- Complex animations (parallax, slider) : made with pure Javascript. All calculations are made in a unique `requestAnimationFrame` loop (managed by `utils/raf.ts` manager), and are added/removed when the component enters or leaves the viewport to keep good performances. Then, rather than updating the component style/css, the animation set a html variable (--x, --y for example) that can be used in the component and its children thanks to tailwind syntax. See `components/organismes/home-models.svelte` for a practical example.
 
 ### Svelte
 
