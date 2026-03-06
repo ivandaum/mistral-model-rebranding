@@ -87,6 +87,7 @@ The animations are made with simple concepts :
 
 - Most of them are fade-in animations only : triggered only when the element enters the viewport.
 - An IntersectionObserver is monitoring its visibility and update a Svelte `$state()` to trigger or not the animations.
+- DOM is always in its final state, the animations are in fact removing the "style before visible & transitionning" classes. This way if the user has javascript disabled, the page is already in its final state and he doesn't see a broken un-animated page.
 
 _-> See [components/modules/card-model.svelte](https://github.com/ivandaum/mistral-model-rebranding/blob/main/src/lib/components/modules/card-model.svelte) for a practical example._
 
